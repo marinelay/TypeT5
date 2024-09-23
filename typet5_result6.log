@@ -1,0 +1,28 @@
+Loading .env environment variables...
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 33855.37it/s]
+model loaded
+RUN scipy-5
+Timeout!
+RUN sympy-5
+Timeout!
+RUN sympy-6
+Timeout!
+RUN sympy-36
+Timeout!
+RUN sympy-37
+Traceback (most recent call last):
+  File "/home/wonseok/TypeT5/my_test.py", line 196, in <module>
+    predicted_sigmap = run_typet5(main_path / sub_path)
+  File "/home/wonseok/TypeT5/my_test.py", line 139, in run_typet5
+    rollout = asyncio.run(rollout())
+  File "/opt/conda/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/conda/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/wonseok/TypeT5/my_test.py", line 137, in rollout
+    return await rctx.run_on_project(project, pre_args, decode_order)
+  File "/home/wonseok/TypeT5/src/typet5/function_decoding.py", line 214, in run_on_project
+    return await self.project_rollout(
+  File "/home/wonseok/TypeT5/src/typet5/function_decoding.py", line 244, in project_rollout
+    analysis: UsageAnalysis = await eloop.run_in_executor(
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.

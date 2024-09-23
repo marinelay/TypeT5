@@ -1,0 +1,40 @@
+Loading .env environment variables...
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 29583.65it/s]
+model loaded
+RUN scikitlearn-8973
+Assertion Error
+RUN scikitlearn-12603
+Assertion Error
+RUN Zappa-388
+Parse Error
+RUN ansible-1
+DONE 4413
+RUN keras-34
+Assertion Error
+RUN keras-39
+Assertion Error
+RUN luigi-4
+DONE 1573
+RUN luigi-14
+DONE 1297
+RUN pandas-49
+Parse Error
+RUN pandas-57
+Parse Error
+RUN pandas-158
+Timeout!
+RUN scrapy-1
+DONE 1127
+RUN scrapy-2
+DONE 1122
+RUN spacy-5
+Assertion Error
+RUN matplotlib-3
+Traceback (most recent call last):
+  File "/home/wonseok/TypeT5/my_test.py", line 196, in <module>
+    predicted_sigmap = run_typet5(main_path / sub_path)
+  File "/home/wonseok/TypeT5/my_test.py", line 134, in run_typet5
+    project = PythonProject.parse_from_root(proj_root)
+  File "/home/wonseok/TypeT5/src/typet5/static_analysis.py", line 548, in parse_from_root
+    raise FileNotFoundError(f"Project root not exist: {root}")
+FileNotFoundError: Project root not exist: /home/wonseok/ExcePy_Present/data/matplotlib/matplotlib-3/lib/matplotlib

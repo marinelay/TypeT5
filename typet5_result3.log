@@ -1,0 +1,48 @@
+Loading .env environment variables...
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 29399.33it/s]
+model loaded
+RUN kivy-6954
+DONE 4205
+RUN luigi-1836
+DONE 1368
+RUN pandas-17609
+Timeout!
+RUN pandas-21540
+Timeout!
+RUN pandas-22378
+Timeout!
+RUN pandas-22804
+Timeout!
+RUN pandas-24572
+Timeout!
+RUN pandas-28412
+Timeout!
+RUN pandas-36950
+Parse Error
+RUN pandas-37547
+Parse Error
+RUN pandas-38431
+Parse Error
+RUN pandas-39028-1
+Parse Error
+RUN pandas-41915
+Parse Error
+RUN requests-3179
+DONE 814
+RUN requests-3390
+DONE 808
+RUN requests-4723
+DONE 172
+RUN salt-33908
+Parse Error
+RUN salt-38947
+Parse Error
+RUN salt-52624
+Timeout!
+RUN salt-53394
+Timeout!
+RUN salt-54240
+Timeout!
+RUN salt-54785
+Timeout!
+RUN salt-56381

@@ -1,0 +1,2519 @@
+{
+    "utils": {
+        "NETRC_FILES": [
+            {
+                "type": "var",
+                "anno": "tuple"
+            }
+        ],
+        "DEFAULT_CA_BUNDLE_PATH": [
+            {
+                "type": "var",
+                "anno": "certs.Certificate"
+            }
+        ],
+        "super_len": [
+            {
+                "type": "func",
+                "args": {
+                    "o": "object"
+                }
+            }
+        ],
+        "extract_zipped_paths": [
+            {
+                "type": "func",
+                "args": {
+                    "path": "str"
+                }
+            }
+        ],
+        "unquote_header_value": [
+            {
+                "type": "func",
+                "args": {
+                    "value": "str",
+                    "is_filename": "bool"
+                }
+            }
+        ],
+        "parse_dict_header": [
+            {
+                "type": "func",
+                "args": {
+                    "value": "str"
+                }
+            }
+        ],
+        "parse_list_header": [
+            {
+                "type": "func",
+                "args": {
+                    "value": "str"
+                }
+            }
+        ],
+        "get_encodings_from_content": [
+            {
+                "type": "func",
+                "args": {
+                    "content": "str"
+                }
+            }
+        ],
+        "_parse_content_type_header": [
+            {
+                "type": "func",
+                "args": {
+                    "header": "str"
+                }
+            }
+        ],
+        "iter_slices": [
+            {
+                "type": "func",
+                "args": {
+                    "string": "str",
+                    "slice_length": "int"
+                }
+            }
+        ],
+        "UNRESERVED_SET": [
+            {
+                "type": "var",
+                "anno": "frozenset"
+            }
+        ],
+        "dotted_netmask": [
+            {
+                "type": "func",
+                "args": {
+                    "mask": "int"
+                }
+            }
+        ],
+        "address_in_network": [
+            {
+                "type": "func",
+                "args": {
+                    "ip": "str",
+                    "net": "str"
+                }
+            }
+        ],
+        "is_ipv4_address": [
+            {
+                "type": "func",
+                "args": {
+                    "string_ip": "str"
+                }
+            }
+        ],
+        "is_valid_cidr": [
+            {
+                "type": "func",
+                "args": {
+                    "string_network": "str"
+                }
+            }
+        ],
+        "set_environ": [
+            {
+                "type": "func",
+                "args": {
+                    "env_name": "str",
+                    "value": "str"
+                }
+            }
+        ],
+        "parse_header_links": [
+            {
+                "type": "func",
+                "args": {
+                    "value": "str"
+                }
+            }
+        ],
+        "_null": [
+            {
+                "type": "var",
+                "anno": "bytes"
+            }
+        ],
+        "_null2": [
+            {
+                "type": "var",
+                "anno": "bytes"
+            }
+        ],
+        "_null3": [
+            {
+                "type": "var",
+                "anno": "bytes"
+            }
+        ],
+        "guess_json_utf": [
+            {
+                "type": "func",
+                "args": {
+                    "data": "bytes"
+                }
+            }
+        ],
+        "prepend_scheme_if_needed": [
+            {
+                "type": "func",
+                "args": {
+                    "url": "str",
+                    "new_scheme": "str"
+                }
+            }
+        ],
+        "_CLEAN_HEADER_REGEX_BYTE": [
+            {
+                "type": "var",
+                "anno": "re.Pattern"
+            }
+        ],
+        "_CLEAN_HEADER_REGEX_STR": [
+            {
+                "type": "var",
+                "anno": "re.Pattern"
+            }
+        ],
+        "urldefragauth": [
+            {
+                "type": "func",
+                "args": {
+                    "url": "str"
+                }
+            }
+        ],
+        "dict_from_cookiejar": [
+            {
+                "type": "func",
+                "args": {
+                    "cj": "CookieJar"
+                }
+            }
+        ],
+        "get_auth_from_url": [
+            {
+                "type": "func",
+                "args": {
+                    "url": "str"
+                }
+            }
+        ],
+        "proxy_bypass_registry": [
+            {
+                "type": "func",
+                "args": {
+                    "host": "str"
+                }
+            }
+        ],
+        "proxy_bypass": [
+            {
+                "type": "func",
+                "args": {
+                    "host": "str"
+                }
+            }
+        ],
+        "from_key_val_list": [
+            {
+                "type": "func",
+                "args": {
+                    "value": "Union[str, bytes, bool, int]"
+                }
+            }
+        ],
+        "get_netrc_auth": [
+            {
+                "type": "func",
+                "args": {
+                    "url": "str",
+                    "raise_errors": "bool"
+                }
+            }
+        ],
+        "guess_filename": [
+            {
+                "type": "func",
+                "args": {
+                    "obj": "object"
+                }
+            }
+        ],
+        "stream_decode_response_unicode": [
+            {
+                "type": "func",
+                "args": {
+                    "iterator": "Iterator[str]",
+                    "r": "Response"
+                }
+            }
+        ],
+        "should_bypass_proxies": [
+            {
+                "type": "func",
+                "args": {
+                    "url": "str",
+                    "no_proxy": "str"
+                }
+            }
+        ],
+        "get_environ_proxies": [
+            {
+                "type": "func",
+                "args": {
+                    "url": "str",
+                    "no_proxy": "str"
+                }
+            }
+        ],
+        "to_key_val_list": [
+            {
+                "type": "func",
+                "args": {
+                    "value": "object"
+                }
+            }
+        ],
+        "dict_to_sequence": [
+            {
+                "type": "func",
+                "args": {
+                    "d": "Mapping[str, str]"
+                }
+            }
+        ],
+        "add_dict_to_cookiejar": [
+            {
+                "type": "func",
+                "args": {
+                    "cj": "dict",
+                    "cookie_dict": "dict"
+                }
+            }
+        ],
+        "default_user_agent": [
+            {
+                "type": "func",
+                "args": {
+                    "name": "str"
+                }
+            }
+        ],
+        "default_headers": [
+            {
+                "type": "func",
+                "args": {}
+            }
+        ],
+        "select_proxy": [
+            {
+                "type": "func",
+                "args": {
+                    "url": "str",
+                    "proxies": "dict"
+                }
+            }
+        ],
+        "get_encoding_from_headers": [
+            {
+                "type": "func",
+                "args": {
+                    "headers": "CaseInsensitiveDict"
+                }
+            }
+        ],
+        "get_unicode_from_response": [
+            {
+                "type": "func",
+                "args": {
+                    "r": "requests.Response"
+                }
+            }
+        ],
+        "rewind_body": [
+            {
+                "type": "func",
+                "args": {
+                    "prepared_request": "PreparedRequest"
+                }
+            }
+        ],
+        "check_header_validity": [
+            {
+                "type": "func",
+                "args": {
+                    "header": "tuple"
+                }
+            }
+        ],
+        "unquote_unreserved": [
+            {
+                "type": "func",
+                "args": {
+                    "uri": "str"
+                }
+            }
+        ],
+        "requote_uri": [
+            {
+                "type": "func",
+                "args": {
+                    "uri": "str"
+                }
+            }
+        ]
+    },
+    "exceptions": {
+        "RequestException.response": [
+            {
+                "type": "attr",
+                "anno": "BaseHTTPError"
+            }
+        ],
+        "RequestException.request": [
+            {
+                "type": "attr",
+                "anno": "BaseHTTPError"
+            }
+        ],
+        "RequestException.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "args": "Any",
+                    "kwargs": "Any"
+                }
+            }
+        ]
+    },
+    "structures": {
+        "CaseInsensitiveDict._store": [
+            {
+                "type": "attr",
+                "anno": "OrderedDict"
+            }
+        ],
+        "CaseInsensitiveDict.__setitem__": [
+            {
+                "type": "method",
+                "args": {
+                    "key": "str",
+                    "value": "str"
+                }
+            }
+        ],
+        "CaseInsensitiveDict.__getitem__": [
+            {
+                "type": "method",
+                "args": {
+                    "key": "str"
+                }
+            }
+        ],
+        "CaseInsensitiveDict.__delitem__": [
+            {
+                "type": "method",
+                "args": {
+                    "key": "str"
+                }
+            }
+        ],
+        "CaseInsensitiveDict.__len__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "LookupDict.name": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "LookupDict.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str"
+                }
+            }
+        ],
+        "LookupDict.__repr__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "CaseInsensitiveDict.__iter__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "CaseInsensitiveDict.lower_items": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "CaseInsensitiveDict.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "data": "dict",
+                    "kwargs": "object"
+                }
+            }
+        ],
+        "CaseInsensitiveDict.__repr__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "CaseInsensitiveDict.copy": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "CaseInsensitiveDict.__eq__": [
+            {
+                "type": "method",
+                "args": {
+                    "other": "object"
+                }
+            }
+        ],
+        "LookupDict.get": [
+            {
+                "type": "method",
+                "args": {
+                    "key": "str",
+                    "default": "object"
+                }
+            }
+        ],
+        "LookupDict.__getitem__": [
+            {
+                "type": "method",
+                "args": {
+                    "key": "str"
+                }
+            }
+        ]
+    },
+    "auth": {
+        "CONTENT_TYPE_FORM_URLENCODED": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "CONTENT_TYPE_MULTI_PART": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "AuthBase.__call__": [
+            {
+                "type": "method",
+                "args": {
+                    "r": "str"
+                }
+            }
+        ],
+        "HTTPBasicAuth.username": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "HTTPBasicAuth.password": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "HTTPBasicAuth.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "username": "str",
+                    "password": "str"
+                }
+            }
+        ],
+        "HTTPBasicAuth.__eq__": [
+            {
+                "type": "method",
+                "args": {
+                    "other": "object"
+                }
+            }
+        ],
+        "HTTPBasicAuth.__ne__": [
+            {
+                "type": "method",
+                "args": {
+                    "other": "object"
+                }
+            }
+        ],
+        "HTTPDigestAuth.username": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "HTTPDigestAuth.password": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "HTTPDigestAuth._thread_local": [
+            {
+                "type": "attr",
+                "anno": "threading.local"
+            }
+        ],
+        "HTTPDigestAuth.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "username": "str",
+                    "password": "str"
+                }
+            }
+        ],
+        "HTTPDigestAuth.init_per_thread_state": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "HTTPDigestAuth.__eq__": [
+            {
+                "type": "method",
+                "args": {
+                    "other": "object"
+                }
+            }
+        ],
+        "HTTPDigestAuth.__ne__": [
+            {
+                "type": "method",
+                "args": {
+                    "other": "object"
+                }
+            }
+        ],
+        "HTTPDigestAuth.handle_redirect": [
+            {
+                "type": "method",
+                "args": {
+                    "r": "HTTPBasicAuth",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "_basic_auth_str": [
+            {
+                "type": "func",
+                "args": {
+                    "username": "str",
+                    "password": "str"
+                }
+            }
+        ],
+        "HTTPProxyAuth.__call__": [
+            {
+                "type": "method",
+                "args": {
+                    "r": "Request"
+                }
+            }
+        ],
+        "HTTPBasicAuth.__call__": [
+            {
+                "type": "method",
+                "args": {
+                    "r": "Request"
+                }
+            }
+        ],
+        "HTTPDigestAuth.build_digest_header": [
+            {
+                "type": "method",
+                "args": {
+                    "method": "str",
+                    "url": "str"
+                }
+            }
+        ],
+        "HTTPDigestAuth.handle_401": [
+            {
+                "type": "method",
+                "args": {
+                    "r": "HTTPBasicAuth",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "HTTPDigestAuth.__call__": [
+            {
+                "type": "method",
+                "args": {
+                    "r": "HTTPBasicAuth"
+                }
+            }
+        ]
+    },
+    "compat": {
+        "_ver": [
+            {
+                "type": "var",
+                "anno": "tuple"
+            }
+        ],
+        "is_py2": [
+            {
+                "type": "var",
+                "anno": "bool"
+            }
+        ],
+        "is_py3": [
+            {
+                "type": "var",
+                "anno": "bool"
+            }
+        ],
+        "bytes": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "str": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "builtin_str": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "basestring": [
+            {
+                "type": "var",
+                "anno": "tuple"
+            }
+        ],
+        "numeric_types": [
+            {
+                "type": "var",
+                "anno": "Callable[[int, int], int]"
+            }
+        ],
+        "integer_types": [
+            {
+                "type": "var",
+                "anno": "tuple"
+            }
+        ]
+    },
+    "models": {
+        "REDIRECT_STATI": [
+            {
+                "type": "var",
+                "anno": "tuple[int, ...]"
+            }
+        ],
+        "DEFAULT_REDIRECT_LIMIT": [
+            {
+                "type": "var",
+                "anno": "int"
+            }
+        ],
+        "CONTENT_CHUNK_SIZE": [
+            {
+                "type": "var",
+                "anno": "int"
+            }
+        ],
+        "ITER_CHUNK_SIZE": [
+            {
+                "type": "var",
+                "anno": "int"
+            }
+        ],
+        "Request.hooks": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Request.method": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Request.url": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Request.headers": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Request.files": [
+            {
+                "type": "attr",
+                "anno": "list"
+            }
+        ],
+        "Request.data": [
+            {
+                "type": "attr",
+                "anno": "list"
+            }
+        ],
+        "Request.json": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Request.params": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Request.auth": [
+            {
+                "type": "attr",
+                "anno": "tuple"
+            }
+        ],
+        "Request.cookies": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Request.__repr__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "PreparedRequest.method": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "PreparedRequest.url": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "PreparedRequest.headers": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "PreparedRequest._cookies": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "PreparedRequest.body": [
+            {
+                "type": "attr",
+                "anno": "object"
+            }
+        ],
+        "PreparedRequest.hooks": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "PreparedRequest._body_position": [
+            {
+                "type": "attr",
+                "anno": "object"
+            }
+        ],
+        "PreparedRequest.__repr__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "PreparedRequest._get_idna_encoded_host": [
+            {
+                "type": "method",
+                "args": {
+                    "host": "str"
+                }
+            }
+        ],
+        "Response.__attrs__": [
+            {
+                "type": "attr",
+                "anno": "list"
+            }
+        ],
+        "Response._content": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "Response._content_consumed": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "Response._next": [
+            {
+                "type": "attr",
+                "anno": "Response"
+            }
+        ],
+        "Response.status_code": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "Response.headers": [
+            {
+                "type": "attr",
+                "anno": "CaseInsensitiveDict"
+            }
+        ],
+        "Response.raw": [
+            {
+                "type": "attr",
+                "anno": "Response"
+            }
+        ],
+        "Response.url": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "RequestEncodingMixin.path_url": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Response.encoding": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Response.history": [
+            {
+                "type": "attr",
+                "anno": "list"
+            }
+        ],
+        "Response.reason": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Response.cookies": [
+            {
+                "type": "attr",
+                "anno": "cookielib.CookieJar"
+            }
+        ],
+        "Response.elapsed": [
+            {
+                "type": "attr",
+                "anno": "datetime.timedelta"
+            }
+        ],
+        "Response.request": [
+            {
+                "type": "attr",
+                "anno": "Request"
+            }
+        ],
+        "Response.__enter__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Response.__repr__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Response.is_redirect": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Response.is_permanent_redirect": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Response.next": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Response.__setstate__": [
+            {
+                "type": "method",
+                "args": {
+                    "state": "dict"
+                }
+            }
+        ],
+        "RequestEncodingMixin._encode_files": [
+            {
+                "type": "method",
+                "args": {
+                    "files": "dict",
+                    "data": "object"
+                }
+            }
+        ],
+        "RequestEncodingMixin._encode_params": [
+            {
+                "type": "method",
+                "args": {
+                    "data": "object"
+                }
+            }
+        ],
+        "Response.__init__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "PreparedRequest.prepare_method": [
+            {
+                "type": "method",
+                "args": {
+                    "method": "str"
+                }
+            }
+        ],
+        "RequestHooksMixin.deregister_hook": [
+            {
+                "type": "method",
+                "args": {
+                    "event": "str",
+                    "hook": "Callable[[], str]"
+                }
+            }
+        ],
+        "RequestHooksMixin.register_hook": [
+            {
+                "type": "method",
+                "args": {
+                    "event": "str",
+                    "hook": "Callable"
+                }
+            }
+        ],
+        "PreparedRequest.prepare_hooks": [
+            {
+                "type": "method",
+                "args": {
+                    "hooks": "list"
+                }
+            }
+        ],
+        "Response.close": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Response.__exit__": [
+            {
+                "type": "method",
+                "args": {
+                    "args": "str"
+                }
+            }
+        ],
+        "PreparedRequest.__init__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "PreparedRequest.copy": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "method": "str",
+                    "url": "str",
+                    "headers": "dict",
+                    "files": "list",
+                    "data": "list",
+                    "params": "dict",
+                    "auth": "tuple",
+                    "cookies": "dict",
+                    "hooks": "dict",
+                    "json": "dict"
+                }
+            }
+        ],
+        "Response.links": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "PreparedRequest.prepare_content_length": [
+            {
+                "type": "method",
+                "args": {
+                    "body": "bytes"
+                }
+            }
+        ],
+        "PreparedRequest.prepare_auth": [
+            {
+                "type": "method",
+                "args": {
+                    "auth": "tuple",
+                    "url": "str"
+                }
+            }
+        ],
+        "PreparedRequest.prepare_body": [
+            {
+                "type": "method",
+                "args": {
+                    "data": "dict",
+                    "files": "dict",
+                    "json": "dict"
+                }
+            }
+        ],
+        "PreparedRequest.prepare_cookies": [
+            {
+                "type": "method",
+                "args": {
+                    "cookies": "dict"
+                }
+            }
+        ],
+        "Response.raise_for_status": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Response.ok": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Response.__nonzero__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Response.__bool__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Response.iter_content": [
+            {
+                "type": "method",
+                "args": {
+                    "chunk_size": "int",
+                    "decode_unicode": "bool"
+                }
+            }
+        ],
+        "Response.content": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Response.apparent_encoding": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Response.text": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Response.json": [
+            {
+                "type": "method",
+                "args": {
+                    "kwargs": "object"
+                }
+            }
+        ],
+        "Response.__getstate__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Response.iter_lines": [
+            {
+                "type": "method",
+                "args": {
+                    "chunk_size": "int",
+                    "decode_unicode": "bool",
+                    "delimiter": "str"
+                }
+            }
+        ],
+        "Response.__iter__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "PreparedRequest.prepare_headers": [
+            {
+                "type": "method",
+                "args": {
+                    "headers": "dict"
+                }
+            }
+        ],
+        "PreparedRequest.prepare_url": [
+            {
+                "type": "method",
+                "args": {
+                    "url": "str",
+                    "params": "dict"
+                }
+            }
+        ],
+        "PreparedRequest.prepare": [
+            {
+                "type": "method",
+                "args": {
+                    "method": "str",
+                    "url": "str",
+                    "headers": "dict",
+                    "files": "dict",
+                    "data": "dict",
+                    "params": "dict",
+                    "auth": "tuple",
+                    "cookies": "dict",
+                    "hooks": "dict",
+                    "json": "dict"
+                }
+            }
+        ],
+        "Request.prepare": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ]
+    },
+    "cookies": {
+        "MockRequest._r": [
+            {
+                "type": "attr",
+                "anno": "Morsel"
+            }
+        ],
+        "MockRequest._new_headers": [
+            {
+                "type": "attr",
+                "anno": "MutableMapping[str, str]"
+            }
+        ],
+        "MockRequest.type": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "MockRequest.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "Morsel"
+                }
+            }
+        ],
+        "MockRequest.get_type": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "MockRequest.get_host": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "MockRequest.get_origin_req_host": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "MockRequest.is_unverifiable": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "MockRequest.add_header": [
+            {
+                "type": "method",
+                "args": {
+                    "key": "str",
+                    "val": "str"
+                }
+            }
+        ],
+        "MockRequest.add_unredirected_header": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str",
+                    "value": "str"
+                }
+            }
+        ],
+        "MockRequest.get_new_headers": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "MockRequest.unverifiable": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "MockRequest.origin_req_host": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "MockRequest.host": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "MockResponse._headers": [
+            {
+                "type": "attr",
+                "anno": "MutableMapping[str, Morsel]"
+            }
+        ],
+        "MockResponse.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "headers": "MutableMapping[str, Morsel]"
+                }
+            }
+        ],
+        "MockResponse.info": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "MockResponse.getheaders": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str"
+                }
+            }
+        ],
+        "extract_cookies_to_jar": [
+            {
+                "type": "func",
+                "args": {
+                    "jar": "cookielib.CookieJar",
+                    "request": "Morsel",
+                    "response": "Morsel"
+                }
+            }
+        ],
+        "remove_cookie_by_name": [
+            {
+                "type": "func",
+                "args": {
+                    "cookiejar": "cookielib.CookieJar",
+                    "name": "str",
+                    "domain": "str",
+                    "path": "str"
+                }
+            }
+        ],
+        "RequestsCookieJar.iterkeys": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "RequestsCookieJar.keys": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "RequestsCookieJar.itervalues": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "RequestsCookieJar.values": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "RequestsCookieJar.iteritems": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "RequestsCookieJar.items": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "RequestsCookieJar.list_domains": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "RequestsCookieJar.list_paths": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "RequestsCookieJar.multiple_domains": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "RequestsCookieJar.get_dict": [
+            {
+                "type": "method",
+                "args": {
+                    "domain": "str",
+                    "path": "str"
+                }
+            }
+        ],
+        "RequestsCookieJar.__contains__": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str"
+                }
+            }
+        ],
+        "RequestsCookieJar.__delitem__": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str"
+                }
+            }
+        ],
+        "RequestsCookieJar.set_cookie": [
+            {
+                "type": "method",
+                "args": {
+                    "cookie": "cookielib.Cookie",
+                    "args": "str",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "RequestsCookieJar.update": [
+            {
+                "type": "method",
+                "args": {
+                    "other": "object"
+                }
+            }
+        ],
+        "RequestsCookieJar._find": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str",
+                    "domain": "str",
+                    "path": "str"
+                }
+            }
+        ],
+        "RequestsCookieJar._find_no_duplicates": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str",
+                    "domain": "str",
+                    "path": "str"
+                }
+            }
+        ],
+        "RequestsCookieJar.__getitem__": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str"
+                }
+            }
+        ],
+        "RequestsCookieJar.get": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str",
+                    "default": "object",
+                    "domain": "str",
+                    "path": "str"
+                }
+            }
+        ],
+        "RequestsCookieJar._cookies_lock": [
+            {
+                "type": "attr",
+                "anno": "threading.RLock"
+            }
+        ],
+        "RequestsCookieJar.__setstate__": [
+            {
+                "type": "method",
+                "args": {
+                    "state": "dict"
+                }
+            }
+        ],
+        "RequestsCookieJar.get_policy": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "RequestsCookieJar.copy": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "create_cookie": [
+            {
+                "type": "func",
+                "args": {
+                    "name": "str",
+                    "value": "str",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "morsel_to_cookie": [
+            {
+                "type": "func",
+                "args": {
+                    "morsel": "Morsel"
+                }
+            }
+        ],
+        "cookiejar_from_dict": [
+            {
+                "type": "func",
+                "args": {
+                    "cookie_dict": "dict",
+                    "cookiejar": "cookielib.CookieJar",
+                    "overwrite": "bool"
+                }
+            }
+        ],
+        "merge_cookies": [
+            {
+                "type": "func",
+                "args": {
+                    "cookiejar": "cookielib.CookieJar",
+                    "cookies": "cookielib.CookieJar"
+                }
+            }
+        ],
+        "MockRequest.has_header": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str"
+                }
+            }
+        ],
+        "_copy_cookie_jar": [
+            {
+                "type": "func",
+                "args": {
+                    "jar": "cookielib.CookieJar"
+                }
+            }
+        ],
+        "RequestsCookieJar.__getstate__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "RequestsCookieJar.set": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str",
+                    "value": "cookielib.CookieJar",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "RequestsCookieJar.__setitem__": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str",
+                    "value": "cookielib.CookieJar"
+                }
+            }
+        ],
+        "get_cookie_header": [
+            {
+                "type": "func",
+                "args": {
+                    "jar": "cookielib.CookieJar",
+                    "request": "Morsel"
+                }
+            }
+        ],
+        "MockRequest.get_header": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str",
+                    "default": "object"
+                }
+            }
+        ],
+        "MockRequest.get_full_url": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ]
+    },
+    "_internal_utils": {
+        "to_native_string": [
+            {
+                "type": "func",
+                "args": {
+                    "string": "str",
+                    "encoding": "str"
+                }
+            }
+        ],
+        "unicode_is_ascii": [
+            {
+                "type": "func",
+                "args": {
+                    "u_string": "str"
+                }
+            }
+        ]
+    },
+    "sessions": {
+        "preferred_clock": [
+            {
+                "type": "var",
+                "anno": "Callable"
+            }
+        ],
+        "merge_setting": [
+            {
+                "type": "func",
+                "args": {
+                    "request_setting": "object",
+                    "session_setting": "object",
+                    "dict_class": "type"
+                }
+            }
+        ],
+        "SessionRedirectMixin.rebuild_method": [
+            {
+                "type": "method",
+                "args": {
+                    "prepared_request": "PreparedRequest",
+                    "response": "PreparedRequest"
+                }
+            }
+        ],
+        "Session.__attrs__": [
+            {
+                "type": "attr",
+                "anno": "list"
+            }
+        ],
+        "Session.headers": [
+            {
+                "type": "attr",
+                "anno": "CaseInsensitiveDict"
+            }
+        ],
+        "SessionRedirectMixin.get_redirect_target": [
+            {
+                "type": "method",
+                "args": {
+                    "resp": "Response"
+                }
+            }
+        ],
+        "Session.auth": [
+            {
+                "type": "attr",
+                "anno": "tuple"
+            }
+        ],
+        "Session.proxies": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Session.hooks": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Session.params": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Session.stream": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "Session.verify": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "Session.cert": [
+            {
+                "type": "attr",
+                "anno": "tuple"
+            }
+        ],
+        "Session.max_redirects": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "Session.trust_env": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "Session.cookies": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Session.adapters": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Session.__enter__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Session.mount": [
+            {
+                "type": "method",
+                "args": {
+                    "prefix": "str",
+                    "adapter": "HTTPAdapter"
+                }
+            }
+        ],
+        "Session.__getstate__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Session.__setstate__": [
+            {
+                "type": "method",
+                "args": {
+                    "state": "Mapping[str, str]"
+                }
+            }
+        ],
+        "Session.close": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Session.__exit__": [
+            {
+                "type": "method",
+                "args": {
+                    "args": "str"
+                }
+            }
+        ],
+        "Session.__init__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "session": [
+            {
+                "type": "func",
+                "args": {}
+            }
+        ],
+        "Session.send": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "PreparedRequest",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "Session.request": [
+            {
+                "type": "method",
+                "args": {
+                    "method": "str",
+                    "url": "str",
+                    "params": "dict",
+                    "data": "dict",
+                    "headers": "dict",
+                    "cookies": "dict",
+                    "files": "list",
+                    "auth": "tuple",
+                    "timeout": "tuple",
+                    "allow_redirects": "bool",
+                    "proxies": "dict",
+                    "hooks": "dict",
+                    "stream": "bool",
+                    "verify": "bool",
+                    "cert": "tuple",
+                    "json": "dict"
+                }
+            }
+        ],
+        "Session.delete": [
+            {
+                "type": "method",
+                "args": {
+                    "url": "str",
+                    "kwargs": "dict"
+                }
+            }
+        ],
+        "Session.patch": [
+            {
+                "type": "method",
+                "args": {
+                    "url": "str",
+                    "data": "dict",
+                    "kwargs": "dict"
+                }
+            }
+        ],
+        "Session.put": [
+            {
+                "type": "method",
+                "args": {
+                    "url": "str",
+                    "data": "dict",
+                    "kwargs": "dict"
+                }
+            }
+        ],
+        "Session.post": [
+            {
+                "type": "method",
+                "args": {
+                    "url": "str",
+                    "data": "dict",
+                    "json": "dict",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "Session.head": [
+            {
+                "type": "method",
+                "args": {
+                    "url": "str",
+                    "kwargs": "dict"
+                }
+            }
+        ],
+        "Session.options": [
+            {
+                "type": "method",
+                "args": {
+                    "url": "str",
+                    "kwargs": "dict"
+                }
+            }
+        ],
+        "Session.get": [
+            {
+                "type": "method",
+                "args": {
+                    "url": "str",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "Session.merge_environment_settings": [
+            {
+                "type": "method",
+                "args": {
+                    "url": "str",
+                    "proxies": "dict",
+                    "stream": "bool",
+                    "verify": "bool",
+                    "cert": "tuple"
+                }
+            }
+        ],
+        "SessionRedirectMixin.rebuild_proxies": [
+            {
+                "type": "method",
+                "args": {
+                    "prepared_request": "PreparedRequest",
+                    "proxies": "dict"
+                }
+            }
+        ],
+        "merge_hooks": [
+            {
+                "type": "func",
+                "args": {
+                    "request_hooks": "object",
+                    "session_hooks": "object",
+                    "dict_class": "type"
+                }
+            }
+        ],
+        "SessionRedirectMixin.rebuild_auth": [
+            {
+                "type": "method",
+                "args": {
+                    "prepared_request": "PreparedRequest",
+                    "response": "PreparedRequest"
+                }
+            }
+        ],
+        "Session.get_adapter": [
+            {
+                "type": "method",
+                "args": {
+                    "url": "str"
+                }
+            }
+        ],
+        "Session.prepare_request": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "Request"
+                }
+            }
+        ],
+        "SessionRedirectMixin.resolve_redirects": [
+            {
+                "type": "method",
+                "args": {
+                    "resp": "Response",
+                    "req": "PreparedRequest",
+                    "stream": "bool",
+                    "timeout": "tuple",
+                    "verify": "bool",
+                    "cert": "tuple",
+                    "proxies": "tuple",
+                    "yield_requests": "bool",
+                    "adapter_kwargs": "dict"
+                }
+            }
+        ]
+    },
+    "status_codes": {
+        "_codes": [
+            {
+                "type": "var",
+                "anno": "LookupDict"
+            }
+        ],
+        "codes": [
+            {
+                "type": "var",
+                "anno": "LookupDict"
+            }
+        ],
+        "_init": [
+            {
+                "type": "func",
+                "args": {}
+            }
+        ]
+    },
+    "__version__": {
+        "__title__": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "__description__": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "__url__": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "__version__": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "__build__": [
+            {
+                "type": "var",
+                "anno": "int"
+            }
+        ],
+        "__author__": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "__author_email__": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "__license__": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "__copyright__": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "__cake__": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ]
+    },
+    "": {
+        "check_compatibility": [
+            {
+                "type": "func",
+                "args": {
+                    "urllib3_version": "str",
+                    "chardet_version": "str"
+                }
+            }
+        ],
+        "_check_cryptography": [
+            {
+                "type": "func",
+                "args": {
+                    "cryptography_version": "str"
+                }
+            }
+        ],
+        "NullHandler.emit": [
+            {
+                "type": "method",
+                "args": {
+                    "record": "logging.LogRecord"
+                }
+            }
+        ]
+    },
+    "adapters": {
+        "DEFAULT_POOLBLOCK": [
+            {
+                "type": "var",
+                "anno": "bool"
+            }
+        ],
+        "DEFAULT_POOLSIZE": [
+            {
+                "type": "var",
+                "anno": "int"
+            }
+        ],
+        "DEFAULT_RETRIES": [
+            {
+                "type": "var",
+                "anno": "int"
+            }
+        ],
+        "DEFAULT_POOL_TIMEOUT": [
+            {
+                "type": "var",
+                "anno": "int"
+            }
+        ],
+        "BaseAdapter.__init__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "BaseAdapter.send": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "Request",
+                    "stream": "bool",
+                    "timeout": "tuple",
+                    "verify": "bool",
+                    "cert": "tuple",
+                    "proxies": "tuple"
+                }
+            }
+        ],
+        "BaseAdapter.close": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "HTTPAdapter.__attrs__": [
+            {
+                "type": "attr",
+                "anno": "list"
+            }
+        ],
+        "HTTPAdapter.max_retries": [
+            {
+                "type": "attr",
+                "anno": "Retry"
+            }
+        ],
+        "HTTPAdapter.config": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "HTTPAdapter.proxy_manager": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "HTTPAdapter._pool_connections": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "HTTPAdapter._pool_maxsize": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "HTTPAdapter._pool_block": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "HTTPAdapter.__getstate__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "HTTPAdapter.poolmanager": [
+            {
+                "type": "attr",
+                "anno": "PoolManager"
+            }
+        ],
+        "HTTPAdapter.init_poolmanager": [
+            {
+                "type": "method",
+                "args": {
+                    "connections": "int",
+                    "maxsize": "int",
+                    "block": "bool",
+                    "pool_kwargs": "dict"
+                }
+            }
+        ],
+        "HTTPAdapter.__setstate__": [
+            {
+                "type": "method",
+                "args": {
+                    "state": "dict"
+                }
+            }
+        ],
+        "HTTPAdapter.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "pool_connections": "int",
+                    "pool_maxsize": "int",
+                    "max_retries": "int",
+                    "pool_block": "bool"
+                }
+            }
+        ],
+        "HTTPAdapter.cert_verify": [
+            {
+                "type": "method",
+                "args": {
+                    "conn": "Connection",
+                    "url": "str",
+                    "verify": "bool",
+                    "cert": "tuple"
+                }
+            }
+        ],
+        "HTTPAdapter.close": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "HTTPAdapter.add_headers": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "Request",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "HTTPAdapter.proxy_headers": [
+            {
+                "type": "method",
+                "args": {
+                    "proxy": "str"
+                }
+            }
+        ],
+        "HTTPAdapter.request_url": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "Request",
+                    "proxies": "dict"
+                }
+            }
+        ],
+        "HTTPAdapter.build_response": [
+            {
+                "type": "method",
+                "args": {
+                    "req": "Request",
+                    "resp": "HTTPResponse"
+                }
+            }
+        ],
+        "SOCKSProxyManager": [
+            {
+                "type": "func",
+                "args": {
+                    "args": "Any",
+                    "kwargs": "Any"
+                }
+            }
+        ],
+        "HTTPAdapter.proxy_manager_for": [
+            {
+                "type": "method",
+                "args": {
+                    "proxy": "str",
+                    "proxy_kwargs": "str"
+                }
+            }
+        ],
+        "HTTPAdapter.get_connection": [
+            {
+                "type": "method",
+                "args": {
+                    "url": "str",
+                    "proxies": "dict"
+                }
+            }
+        ],
+        "HTTPAdapter.send": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "Request",
+                    "stream": "bool",
+                    "timeout": "tuple",
+                    "verify": "bool",
+                    "cert": "tuple",
+                    "proxies": "tuple"
+                }
+            }
+        ]
+    },
+    "hooks": {
+        "HOOKS": [
+            {
+                "type": "var",
+                "anno": "list"
+            }
+        ],
+        "default_hooks": [
+            {
+                "type": "func",
+                "args": {}
+            }
+        ],
+        "dispatch_hook": [
+            {
+                "type": "func",
+                "args": {
+                    "key": "str",
+                    "hooks": "dict",
+                    "hook_data": "object",
+                    "kwargs": "str"
+                }
+            }
+        ]
+    },
+    "api": {
+        "request": [
+            {
+                "type": "func",
+                "args": {
+                    "method": "str",
+                    "url": "str",
+                    "kwargs": "dict"
+                }
+            }
+        ],
+        "delete": [
+            {
+                "type": "func",
+                "args": {
+                    "url": "str",
+                    "kwargs": "dict"
+                }
+            }
+        ],
+        "patch": [
+            {
+                "type": "func",
+                "args": {
+                    "url": "str",
+                    "data": "dict",
+                    "kwargs": "dict"
+                }
+            }
+        ],
+        "put": [
+            {
+                "type": "func",
+                "args": {
+                    "url": "str",
+                    "data": "dict",
+                    "kwargs": "dict"
+                }
+            }
+        ],
+        "post": [
+            {
+                "type": "func",
+                "args": {
+                    "url": "str",
+                    "data": "dict",
+                    "json": "dict",
+                    "kwargs": "dict"
+                }
+            }
+        ],
+        "head": [
+            {
+                "type": "func",
+                "args": {
+                    "url": "str",
+                    "kwargs": "dict"
+                }
+            }
+        ],
+        "options": [
+            {
+                "type": "func",
+                "args": {
+                    "url": "str",
+                    "kwargs": "dict"
+                }
+            }
+        ],
+        "get": [
+            {
+                "type": "func",
+                "args": {
+                    "url": "str",
+                    "params": "dict",
+                    "kwargs": "dict"
+                }
+            }
+        ]
+    },
+    "help": {
+        "pyopenssl": [
+            {
+                "type": "var",
+                "anno": "pyopenssl"
+            }
+        ],
+        "OpenSSL": [
+            {
+                "type": "var",
+                "anno": "OpenSSL"
+            }
+        ],
+        "cryptography": [
+            {
+                "type": "var",
+                "anno": "cryptography"
+            }
+        ],
+        "_implementation": [
+            {
+                "type": "func",
+                "args": {}
+            }
+        ],
+        "info": [
+            {
+                "type": "func",
+                "args": {}
+            }
+        ],
+        "main": [
+            {
+                "type": "func",
+                "args": {}
+            }
+        ]
+    }
+}

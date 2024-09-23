@@ -199,13 +199,14 @@ class RolloutCtx:
         def callback(e: PythonElem, types, sig: ElemSignature) -> None:
             if e.path not in sigmap:
                 sigmap[e.path] = sig
-                print(f"{e.path}: {str(sig)}")
+                # print(f"{e.path}: {str(sig)}")
             else:
                 old_sig = sigmap[e.path]
                 corrected = str(old_sig) != str(sig)
                 sigmap[e.path] = sig
                 if corrected:
-                    print(f"(updated) {e.path}: {str(sig)}")
+                    pass
+                    # print(f"(updated) {e.path}: {str(sig)}")
 
         with ThreadPoolExecutor(1) as model_executor, ProcessPoolExecutor(
             concurrency

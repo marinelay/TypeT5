@@ -1,0 +1,36 @@
+Loading .env environment variables...
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 23017.52it/s]
+model loaded
+RUN airflow-3831
+DONE 4633
+RUN airflow-4674
+DONE 5324
+RUN airflow-5686
+DONE 6297
+RUN airflow-6036
+DONE 6656
+RUN airflow-8151
+DONE 7573
+RUN airflow-14686
+Timeout!
+RUN beets-3360
+DONE 816
+RUN core-8065
+Traceback (most recent call last):
+  File "/home/wonseok/TypeT5/my_test.py", line 192, in <module>
+    predicted_sigmap = run_typet5(main_path / sub_path)
+  File "/home/wonseok/TypeT5/my_test.py", line 133, in run_typet5
+    project = PythonProject.parse_from_root(proj_root)
+  File "/home/wonseok/TypeT5/src/typet5/static_analysis.py", line 564, in parse_from_root
+    mod = src2module(src_text)
+  File "/home/wonseok/TypeT5/src/typet5/static_analysis.py", line 535, in <lambda>
+    cst.parse_module(s)
+  File "/home/wonseok/.local/share/virtualenvs/TypeT5-9WMVPkdd/lib/python3.10/site-packages/libcst/_parser/entrypoints.py", line 109, in parse_module
+    result = _parse(
+  File "/home/wonseok/.local/share/virtualenvs/TypeT5-9WMVPkdd/lib/python3.10/site-packages/libcst/_parser/entrypoints.py", line 55, in _parse
+    return parse(source_str)
+libcst._exceptions.ParserSyntaxError: Syntax Error @ 190:1.
+parser error: error at 189:38: expected one of (, *
+
+            from asyncio import async as ensure_future
+                                                     ^

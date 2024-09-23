@@ -1,0 +1,12 @@
+Loading .env environment variables...
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 44779.05it/s]
+model loaded
+RUN core-8065
+Parse Error
+RUN core-21734
+Timeout!
+RUN core-29829
+Timeout!
+RUN core-32222
+Timeout!
+RUN core-32318

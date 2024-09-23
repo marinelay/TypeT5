@@ -1,0 +1,3280 @@
+{
+    "handlers": {
+        "ErrorHandler.handlers": [
+            {
+                "type": "attr",
+                "anno": "list"
+            }
+        ],
+        "ErrorHandler.cached_handlers": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "ErrorHandler._missing": [
+            {
+                "type": "attr",
+                "anno": "object"
+            }
+        ],
+        "ErrorHandler.debug": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "ErrorHandler.__init__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "ErrorHandler._render_exception": [
+            {
+                "type": "method",
+                "args": {
+                    "exception": "Exception"
+                }
+            }
+        ],
+        "ErrorHandler.add": [
+            {
+                "type": "method",
+                "args": {
+                    "exception": "SanicException",
+                    "handler": "SanicException"
+                }
+            }
+        ],
+        "ErrorHandler.log": [
+            {
+                "type": "method",
+                "args": {
+                    "message": "str",
+                    "level": "str"
+                }
+            }
+        ],
+        "ContentRangeHandler.__slots__": [
+            {
+                "type": "attr",
+                "anno": "tuple"
+            }
+        ],
+        "ContentRangeHandler.total": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "ContentRangeHandler.start": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "ContentRangeHandler.end": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "ContentRangeHandler.size": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "ContentRangeHandler.headers": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "ContentRangeHandler.__bool__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "ErrorHandler._render_traceback_html": [
+            {
+                "type": "method",
+                "args": {
+                    "exception": "Exception",
+                    "request": "Request"
+                }
+            }
+        ],
+        "ErrorHandler.lookup": [
+            {
+                "type": "method",
+                "args": {
+                    "exception": "object"
+                }
+            }
+        ],
+        "ErrorHandler.response": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "Request",
+                    "exception": "object"
+                }
+            }
+        ],
+        "ErrorHandler.default": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "Request",
+                    "exception": "object"
+                }
+            }
+        ],
+        "ContentRangeHandler.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "aiohttp.ClientRequest",
+                    "stats": "aiohttp.ClientStats"
+                }
+            }
+        ]
+    },
+    "exceptions": {
+        "TRACEBACK_STYLE": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "TRACEBACK_WRAPPER_HTML": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "TRACEBACK_WRAPPER_INNER_HTML": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "TRACEBACK_BORDER": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "TRACEBACK_LINE_HTML": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "INTERNAL_SERVER_ERROR_HTML": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "_sanic_exceptions": [
+            {
+                "type": "var",
+                "anno": "dict[int, SanicException]"
+            }
+        ],
+        "SanicException.status_code": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "SanicException.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "message": "str",
+                    "status_code": "int"
+                }
+            }
+        ],
+        "add_status_code": [
+            {
+                "type": "func",
+                "args": {
+                    "code": "int"
+                }
+            }
+        ],
+        "MethodNotSupported.headers": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "MethodNotSupported.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "message": "str",
+                    "method": "str",
+                    "allowed_methods": "list"
+                }
+            }
+        ],
+        "FileNotFound.path": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "FileNotFound.relative_url": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "FileNotFound.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "message": "str",
+                    "path": "str",
+                    "relative_url": "str"
+                }
+            }
+        ],
+        "ContentRangeError.headers": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "ContentRangeError.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "message": "str",
+                    "content_range": "ContentRange"
+                }
+            }
+        ],
+        "Unauthorized.headers": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Unauthorized.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "message": "str",
+                    "status_code": "int",
+                    "scheme": "str",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "abort": [
+            {
+                "type": "func",
+                "args": {
+                    "status_code": "int",
+                    "message": "str"
+                }
+            }
+        ]
+    },
+    "worker": {
+        "ssl": [
+            {
+                "type": "var",
+                "anno": "ssl.SSLContext"
+            }
+        ],
+        "GunicornWorker.http_protocol": [
+            {
+                "type": "attr",
+                "anno": "asyncio.Protocol"
+            }
+        ],
+        "GunicornWorker.websocket_protocol": [
+            {
+                "type": "attr",
+                "anno": "asyncio.Protocol"
+            }
+        ],
+        "GunicornWorker.ssl_context": [
+            {
+                "type": "attr",
+                "anno": "ssl.SSLContext"
+            }
+        ],
+        "GunicornWorker.servers": [
+            {
+                "type": "attr",
+                "anno": "set"
+            }
+        ],
+        "GunicornWorker.connections": [
+            {
+                "type": "attr",
+                "anno": "set"
+            }
+        ],
+        "GunicornWorker.exit_code": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "GunicornWorker.signal": [
+            {
+                "type": "attr",
+                "anno": "Signal"
+            }
+        ],
+        "GunicornWorker.loop": [
+            {
+                "type": "attr",
+                "anno": "asyncio.AbstractEventLoop"
+            }
+        ],
+        "GunicornWorker._server_settings": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "GunicornWorker._runner": [
+            {
+                "type": "attr",
+                "anno": "asyncio.Future"
+            }
+        ],
+        "GunicornWorker._run": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "GunicornWorker.alive": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "GunicornWorker._create_ssl_context": [
+            {
+                "type": "method",
+                "args": {
+                    "cfg": "base.Config"
+                }
+            }
+        ],
+        "GunicornWorker.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "args": "str",
+                    "kw": "str"
+                }
+            }
+        ],
+        "GunicornWorker._check_alive": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "GunicornWorker.handle_abort": [
+            {
+                "type": "method",
+                "args": {
+                    "sig": "int",
+                    "frame": "int"
+                }
+            }
+        ],
+        "GunicornWorker.handle_quit": [
+            {
+                "type": "method",
+                "args": {
+                    "sig": "int",
+                    "frame": "int"
+                }
+            }
+        ],
+        "GunicornWorker.init_signals": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "GunicornWorker.close": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "GunicornWorker.run": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "GunicornWorker.init_process": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ]
+    },
+    "config": {
+        "SANIC_PREFIX": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "Config.LOGO": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Config.REQUEST_MAX_SIZE": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "Config.REQUEST_TIMEOUT": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "Config.RESPONSE_TIMEOUT": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "Config.KEEP_ALIVE": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "Config.KEEP_ALIVE_TIMEOUT": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "Config.WEBSOCKET_MAX_SIZE": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "Config.WEBSOCKET_MAX_QUEUE": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "Config.WEBSOCKET_READ_LIMIT": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "Config.WEBSOCKET_WRITE_LIMIT": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "Config.GRACEFUL_SHUTDOWN_TIMEOUT": [
+            {
+                "type": "attr",
+                "anno": "float"
+            }
+        ],
+        "Config.ACCESS_LOG": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "Config.__setattr__": [
+            {
+                "type": "method",
+                "args": {
+                    "attr": "str",
+                    "value": "types.Any"
+                }
+            }
+        ],
+        "Config.from_object": [
+            {
+                "type": "method",
+                "args": {
+                    "obj": "types.ModuleType"
+                }
+            }
+        ],
+        "Config.from_pyfile": [
+            {
+                "type": "method",
+                "args": {
+                    "filename": "str"
+                }
+            }
+        ],
+        "Config.from_envvar": [
+            {
+                "type": "method",
+                "args": {
+                    "variable_name": "str"
+                }
+            }
+        ],
+        "Config.load_environment_vars": [
+            {
+                "type": "method",
+                "args": {
+                    "prefix": "str"
+                }
+            }
+        ],
+        "Config.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "defaults": "dict",
+                    "load_env": "bool",
+                    "keep_alive": "bool"
+                }
+            }
+        ],
+        "Config.__getattr__": [
+            {
+                "type": "method",
+                "args": {
+                    "attr": "str"
+                }
+            }
+        ]
+    },
+    "websocket": {
+        "WebSocketProtocol.websocket": [
+            {
+                "type": "attr",
+                "anno": "WebSocketCommonProtocol"
+            }
+        ],
+        "WebSocketProtocol.websocket_timeout": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "WebSocketProtocol.websocket_max_size": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "WebSocketProtocol.websocket_max_queue": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "WebSocketProtocol.websocket_read_limit": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "WebSocketProtocol.websocket_write_limit": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "WebSocketProtocol.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "args": "Any",
+                    "websocket_timeout": "int",
+                    "websocket_max_size": "int",
+                    "websocket_max_queue": "int",
+                    "websocket_read_limit": "int",
+                    "websocket_write_limit": "int",
+                    "kwargs": "Any"
+                }
+            }
+        ],
+        "WebSocketProtocol.connection_lost": [
+            {
+                "type": "method",
+                "args": {
+                    "exc": "Exception"
+                }
+            }
+        ],
+        "WebSocketProtocol.data_received": [
+            {
+                "type": "method",
+                "args": {
+                    "data": "bytes"
+                }
+            }
+        ],
+        "WebSocketProtocol.response_timeout_callback": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "WebSocketProtocol.websocket_handshake": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "http.Request",
+                    "subprotocols": "str"
+                }
+            }
+        ],
+        "WebSocketProtocol.keep_alive_timeout_callback": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "WebSocketProtocol.write_response": [
+            {
+                "type": "method",
+                "args": {
+                    "response": "HTTPResponse"
+                }
+            }
+        ],
+        "WebSocketProtocol.request_timeout_callback": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ]
+    },
+    "cookies": {
+        "_LegalChars": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "_UnescapedChars": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "_Translator": [
+            {
+                "type": "var",
+                "anno": "dict"
+            }
+        ],
+        "_is_legal_key": [
+            {
+                "type": "var",
+                "anno": "bool"
+            }
+        ],
+        "_quote": [
+            {
+                "type": "func",
+                "args": {
+                    "str": "str"
+                }
+            }
+        ],
+        "CookieJar.headers": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "CookieJar.cookie_headers": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "CookieJar.header_key": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "CookieJar.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "headers": "dict"
+                }
+            }
+        ],
+        "Cookie._keys": [
+            {
+                "type": "attr",
+                "anno": "set"
+            }
+        ],
+        "Cookie._flags": [
+            {
+                "type": "attr",
+                "anno": "set"
+            }
+        ],
+        "Cookie.key": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Cookie.value": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Cookie.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "key": "str",
+                    "value": "str"
+                }
+            }
+        ],
+        "Cookie.__setitem__": [
+            {
+                "type": "method",
+                "args": {
+                    "key": "str",
+                    "value": "bool"
+                }
+            }
+        ],
+        "Cookie.encode": [
+            {
+                "type": "method",
+                "args": {
+                    "encoding": "str"
+                }
+            }
+        ],
+        "CookieJar.__delitem__": [
+            {
+                "type": "method",
+                "args": {
+                    "key": "str"
+                }
+            }
+        ],
+        "CookieJar.__setitem__": [
+            {
+                "type": "method",
+                "args": {
+                    "key": "str",
+                    "value": "str"
+                }
+            }
+        ]
+    },
+    "server": {
+        "current_time": [
+            {
+                "type": "var",
+                "anno": "float"
+            }
+        ],
+        "Signal.stopped": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "HttpProtocol.__slots__": [
+            {
+                "type": "attr",
+                "anno": "tuple"
+            }
+        ],
+        "HttpProtocol.loop": [
+            {
+                "type": "attr",
+                "anno": "asyncio.AbstractEventLoop"
+            }
+        ],
+        "HttpProtocol.transport": [
+            {
+                "type": "attr",
+                "anno": "asyncio.Transport"
+            }
+        ],
+        "HttpProtocol.request": [
+            {
+                "type": "attr",
+                "anno": "Request"
+            }
+        ],
+        "HttpProtocol.parser": [
+            {
+                "type": "attr",
+                "anno": "asyncio.Parser"
+            }
+        ],
+        "HttpProtocol.url": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "HttpProtocol.headers": [
+            {
+                "type": "attr",
+                "anno": "CIMultiDict"
+            }
+        ],
+        "HttpProtocol.router": [
+            {
+                "type": "attr",
+                "anno": "asyncio.Router"
+            }
+        ],
+        "HttpProtocol.signal": [
+            {
+                "type": "attr",
+                "anno": "Signal"
+            }
+        ],
+        "HttpProtocol.access_log": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "HttpProtocol.connections": [
+            {
+                "type": "attr",
+                "anno": "set[asyncio.Transport]"
+            }
+        ],
+        "HttpProtocol.request_handler": [
+            {
+                "type": "attr",
+                "anno": "asyncio.Callable"
+            }
+        ],
+        "HttpProtocol.error_handler": [
+            {
+                "type": "attr",
+                "anno": "asyncio.Callable"
+            }
+        ],
+        "HttpProtocol.request_timeout": [
+            {
+                "type": "attr",
+                "anno": "float"
+            }
+        ],
+        "HttpProtocol.response_timeout": [
+            {
+                "type": "attr",
+                "anno": "float"
+            }
+        ],
+        "HttpProtocol.keep_alive_timeout": [
+            {
+                "type": "attr",
+                "anno": "float"
+            }
+        ],
+        "HttpProtocol.request_max_size": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "HttpProtocol.request_class": [
+            {
+                "type": "attr",
+                "anno": "Request"
+            }
+        ],
+        "HttpProtocol.is_request_stream": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "HttpProtocol._is_stream_handler": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "HttpProtocol._not_paused": [
+            {
+                "type": "attr",
+                "anno": "asyncio.Event"
+            }
+        ],
+        "HttpProtocol._total_request_size": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "HttpProtocol._request_timeout_handler": [
+            {
+                "type": "attr",
+                "anno": "asyncio.Callable"
+            }
+        ],
+        "HttpProtocol._response_timeout_handler": [
+            {
+                "type": "attr",
+                "anno": "asyncio.Callable"
+            }
+        ],
+        "HttpProtocol._keep_alive_timeout_handler": [
+            {
+                "type": "attr",
+                "anno": "asyncio.Callable"
+            }
+        ],
+        "HttpProtocol._last_request_time": [
+            {
+                "type": "attr",
+                "anno": "float"
+            }
+        ],
+        "HttpProtocol._last_response_time": [
+            {
+                "type": "attr",
+                "anno": "float"
+            }
+        ],
+        "HttpProtocol._request_handler_task": [
+            {
+                "type": "attr",
+                "anno": "asyncio.Callable"
+            }
+        ],
+        "HttpProtocol._request_stream_task": [
+            {
+                "type": "attr",
+                "anno": "asyncio.Callable"
+            }
+        ],
+        "HttpProtocol._keep_alive": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "HttpProtocol._header_fragment": [
+            {
+                "type": "attr",
+                "anno": "bytes"
+            }
+        ],
+        "HttpProtocol.state": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "HttpProtocol._debug": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "HttpProtocol.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "loop": "asyncio.AbstractEventLoop",
+                    "request_handler": "asyncio.Callable",
+                    "error_handler": "asyncio.Callable",
+                    "signal": "Signal",
+                    "connections": "set[asyncio.Transport]",
+                    "request_timeout": "float",
+                    "response_timeout": "float",
+                    "keep_alive_timeout": "float",
+                    "request_max_size": "int",
+                    "request_class": "Request",
+                    "access_log": "bool",
+                    "keep_alive": "bool",
+                    "is_request_stream": "bool",
+                    "router": "asyncio.Router",
+                    "state": "dict",
+                    "debug": "bool",
+                    "kwargs": "dict"
+                }
+            }
+        ],
+        "HttpProtocol.keep_alive": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "HttpProtocol.connection_lost": [
+            {
+                "type": "method",
+                "args": {
+                    "exc": "Exception"
+                }
+            }
+        ],
+        "HttpProtocol.pause_writing": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "HttpProtocol.resume_writing": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "HttpProtocol.on_url": [
+            {
+                "type": "method",
+                "args": {
+                    "url": "str"
+                }
+            }
+        ],
+        "HttpProtocol.drain": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "HttpProtocol.cleanup": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "update_current_time": [
+            {
+                "type": "func",
+                "args": {
+                    "loop": "asyncio.AbstractEventLoop"
+                }
+            }
+        ],
+        "trigger_events": [
+            {
+                "type": "func",
+                "args": {
+                    "events": "asyncio.Event",
+                    "loop": "asyncio.AbstractEventLoop"
+                }
+            }
+        ],
+        "HttpProtocol.push_data": [
+            {
+                "type": "method",
+                "args": {
+                    "data": "bytes"
+                }
+            }
+        ],
+        "HttpProtocol.write_error": [
+            {
+                "type": "method",
+                "args": {
+                    "exception": "Exception"
+                }
+            }
+        ],
+        "HttpProtocol.bail_out": [
+            {
+                "type": "method",
+                "args": {
+                    "message": "str",
+                    "from_error": "bool"
+                }
+            }
+        ],
+        "HttpProtocol.on_header": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str",
+                    "value": "str"
+                }
+            }
+        ],
+        "HttpProtocol.data_received": [
+            {
+                "type": "method",
+                "args": {
+                    "data": "bytes"
+                }
+            }
+        ],
+        "HttpProtocol.response_timeout_callback": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "HttpProtocol.request_timeout_callback": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "HttpProtocol.connection_made": [
+            {
+                "type": "method",
+                "args": {
+                    "transport": "asyncio.Transport"
+                }
+            }
+        ],
+        "HttpProtocol.close": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "HttpProtocol.close_if_idle": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "HttpProtocol.keep_alive_timeout_callback": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "HttpProtocol.log_response": [
+            {
+                "type": "method",
+                "args": {
+                    "response": "HTTPResponse"
+                }
+            }
+        ],
+        "HttpProtocol.write_response": [
+            {
+                "type": "method",
+                "args": {
+                    "response": "HTTPResponse"
+                }
+            }
+        ],
+        "HttpProtocol.stream_response": [
+            {
+                "type": "method",
+                "args": {
+                    "response": "HTTPResponse"
+                }
+            }
+        ],
+        "HttpProtocol.execute_request_handler": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "HttpProtocol.on_headers_complete": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "serve": [
+            {
+                "type": "func",
+                "args": {
+                    "host": "str",
+                    "port": "int",
+                    "request_handler": "Callable",
+                    "error_handler": "Callable",
+                    "before_start": "asyncio.Event",
+                    "after_start": "asyncio.Event",
+                    "before_stop": "asyncio.Event",
+                    "after_stop": "asyncio.Event",
+                    "debug": "bool",
+                    "request_timeout": "int",
+                    "response_timeout": "int",
+                    "keep_alive_timeout": "int",
+                    "ssl": "dict",
+                    "sock": "str",
+                    "request_max_size": "int",
+                    "reuse_port": "bool",
+                    "loop": "asyncio.AbstractEventLoop",
+                    "protocol": "asyncio.Protocol",
+                    "backlog": "int",
+                    "register_sys_signals": "bool",
+                    "run_multiple": "bool",
+                    "run_async": "bool",
+                    "connections": "set",
+                    "signal": "Signal",
+                    "request_class": "Type[Request]",
+                    "access_log": "bool",
+                    "keep_alive": "bool",
+                    "is_request_stream": "bool",
+                    "router": "asyncio.Router",
+                    "websocket_max_size": "int",
+                    "websocket_max_queue": "int",
+                    "websocket_read_limit": "int",
+                    "websocket_write_limit": "int",
+                    "state": "str",
+                    "graceful_shutdown_timeout": "float"
+                }
+            }
+        ],
+        "serve_multiple": [
+            {
+                "type": "func",
+                "args": {
+                    "server_settings": "CIMultiDict",
+                    "workers": "int"
+                }
+            }
+        ],
+        "HttpProtocol.on_message_complete": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "HttpProtocol.on_body": [
+            {
+                "type": "method",
+                "args": {
+                    "body": "bytes"
+                }
+            }
+        ]
+    },
+    "log": {
+        "LOGGING_CONFIG_DEFAULTS": [
+            {
+                "type": "var",
+                "anno": "dict"
+            }
+        ],
+        "logger": [
+            {
+                "type": "var",
+                "anno": "logging.Logger"
+            }
+        ],
+        "error_logger": [
+            {
+                "type": "var",
+                "anno": "logging.Logger"
+            }
+        ],
+        "access_logger": [
+            {
+                "type": "var",
+                "anno": "logging.Logger"
+            }
+        ]
+    },
+    "app": {
+        "Sanic.name": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Sanic.router": [
+            {
+                "type": "attr",
+                "anno": "Router"
+            }
+        ],
+        "Sanic.request_class": [
+            {
+                "type": "attr",
+                "anno": "type"
+            }
+        ],
+        "Sanic.error_handler": [
+            {
+                "type": "attr",
+                "anno": "ErrorHandler"
+            }
+        ],
+        "Sanic.config": [
+            {
+                "type": "attr",
+                "anno": "Config"
+            }
+        ],
+        "Sanic.request_middleware": [
+            {
+                "type": "attr",
+                "anno": "deque"
+            }
+        ],
+        "Sanic.response_middleware": [
+            {
+                "type": "attr",
+                "anno": "deque"
+            }
+        ],
+        "Sanic.blueprints": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Sanic._blueprint_order": [
+            {
+                "type": "attr",
+                "anno": "list"
+            }
+        ],
+        "Sanic.configure_logging": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "Sanic.debug": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "Sanic.sock": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Sanic.strict_slashes": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "Sanic.listeners": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Sanic.is_running": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "Sanic.is_request_stream": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "Sanic.websocket_enabled": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "Sanic.websocket_tasks": [
+            {
+                "type": "attr",
+                "anno": "set"
+            }
+        ],
+        "Sanic.go_fast": [
+            {
+                "type": "attr",
+                "anno": "Callable"
+            }
+        ],
+        "Sanic.loop": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Sanic.listener": [
+            {
+                "type": "method",
+                "args": {
+                    "event": "str"
+                }
+            }
+        ],
+        "Sanic.add_task": [
+            {
+                "type": "method",
+                "args": {
+                    "task": "Callable"
+                }
+            }
+        ],
+        "Sanic.register_listener": [
+            {
+                "type": "method",
+                "args": {
+                    "listener": "Callable",
+                    "event": "str"
+                }
+            }
+        ],
+        "Sanic.enable_websocket": [
+            {
+                "type": "method",
+                "args": {
+                    "enable": "bool"
+                }
+            }
+        ],
+        "Sanic.register_middleware": [
+            {
+                "type": "method",
+                "args": {
+                    "middleware": "Callable",
+                    "attach_to": "str"
+                }
+            }
+        ],
+        "Sanic.middleware": [
+            {
+                "type": "method",
+                "args": {
+                    "middleware_or_request": "Callable"
+                }
+            }
+        ],
+        "Sanic.static": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "file_or_directory": "str",
+                    "pattern": "str",
+                    "use_modified_since": "bool",
+                    "use_content_range": "bool",
+                    "stream_large_files": "bool",
+                    "name": "str",
+                    "host": "str",
+                    "strict_slashes": "str",
+                    "content_type": "str"
+                }
+            }
+        ],
+        "Sanic.converted_response_type": [
+            {
+                "type": "method",
+                "args": {
+                    "response": "HTTPResponse"
+                }
+            }
+        ],
+        "Sanic.test_client": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Sanic.stop": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Sanic.__call__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Sanic.trigger_events": [
+            {
+                "type": "method",
+                "args": {
+                    "events": "list",
+                    "loop": "asyncio.AbstractEventLoop"
+                }
+            }
+        ],
+        "Sanic._run_request_middleware": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "Request"
+                }
+            }
+        ],
+        "Sanic._run_response_middleware": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "Request",
+                    "response": "StreamingHTTPResponse"
+                }
+            }
+        ],
+        "Sanic.websocket": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "subprotocols": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Sanic.add_websocket_route": [
+            {
+                "type": "method",
+                "args": {
+                    "handler": "Handler",
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "subprotocols": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Sanic.exception": [
+            {
+                "type": "method",
+                "args": {
+                    "exceptions": "SanicException"
+                }
+            }
+        ],
+        "Sanic.route": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "methods": "frozenset",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "stream": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Sanic.add_route": [
+            {
+                "type": "method",
+                "args": {
+                    "handler": "CompositionView",
+                    "uri": "str",
+                    "methods": "frozenset",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "version": "str",
+                    "name": "str",
+                    "stream": "bool"
+                }
+            }
+        ],
+        "Sanic.delete": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Sanic.patch": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "stream": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Sanic.options": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Sanic.head": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Sanic.put": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "stream": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Sanic.post": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "stream": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Sanic.get": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Sanic.remove_route": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "clean_cache": "bool",
+                    "host": "str"
+                }
+            }
+        ],
+        "Sanic.blueprint": [
+            {
+                "type": "method",
+                "args": {
+                    "blueprint": "aiohttp.ClientRequest",
+                    "options": "str"
+                }
+            }
+        ],
+        "Sanic.register_blueprint": [
+            {
+                "type": "method",
+                "args": {
+                    "args": "str",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "Sanic.handle_request": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "Request",
+                    "write_callback": "Callable",
+                    "stream_callback": "Callable"
+                }
+            }
+        ],
+        "Sanic._helper": [
+            {
+                "type": "method",
+                "args": {
+                    "host": "str",
+                    "port": "int",
+                    "debug": "bool",
+                    "ssl": "dict",
+                    "sock": "str",
+                    "workers": "int",
+                    "loop": "asyncio.AbstractEventLoop",
+                    "protocol": "asyncio.Protocol",
+                    "backlog": "int",
+                    "stop_event": "int",
+                    "register_sys_signals": "bool",
+                    "run_async": "bool",
+                    "auto_reload": "bool"
+                }
+            }
+        ],
+        "Sanic.create_server": [
+            {
+                "type": "method",
+                "args": {
+                    "host": "str",
+                    "port": "int",
+                    "debug": "bool",
+                    "ssl": "dict",
+                    "sock": "str",
+                    "protocol": "asyncio.Protocol",
+                    "backlog": "int",
+                    "stop_event": "int",
+                    "access_log": "bool"
+                }
+            }
+        ],
+        "Sanic.run": [
+            {
+                "type": "method",
+                "args": {
+                    "host": "str",
+                    "port": "int",
+                    "debug": "bool",
+                    "ssl": "dict",
+                    "sock": "str",
+                    "workers": "int",
+                    "protocol": "asyncio.Protocol",
+                    "backlog": "int",
+                    "stop_event": "int",
+                    "register_sys_signals": "bool",
+                    "access_log": "bool",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "Sanic.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str",
+                    "router": "Router",
+                    "error_handler": "ErrorHandler",
+                    "load_env": "bool",
+                    "request_class": "type",
+                    "strict_slashes": "bool",
+                    "log_config": "dict",
+                    "configure_logging": "bool"
+                }
+            }
+        ],
+        "Sanic.url_for": [
+            {
+                "type": "method",
+                "args": {
+                    "view_name": "str",
+                    "kwargs": "str"
+                }
+            }
+        ]
+    },
+    "constants": {
+        "HTTP_METHODS": [
+            {
+                "type": "var",
+                "anno": "tuple"
+            }
+        ]
+    },
+    "__main__": {
+        "parser": [
+            {
+                "type": "var",
+                "anno": "ArgumentParser"
+            }
+        ],
+        "args": [
+            {
+                "type": "var",
+                "anno": "argparse.Namespace"
+            }
+        ],
+        "module_parts": [
+            {
+                "type": "var",
+                "anno": "list"
+            }
+        ],
+        "module_name": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "app_name": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "module": [
+            {
+                "type": "var",
+                "anno": "Module"
+            }
+        ],
+        "app": [
+            {
+                "type": "var",
+                "anno": "Sanic"
+            }
+        ],
+        "ssl": [
+            {
+                "type": "var",
+                "anno": "dict"
+            }
+        ]
+    },
+    "response": {
+        "BaseHTTPResponse._encode_body": [
+            {
+                "type": "method",
+                "args": {
+                    "data": "str"
+                }
+            }
+        ],
+        "BaseHTTPResponse._cookies": [
+            {
+                "type": "attr",
+                "anno": "CookieJar"
+            }
+        ],
+        "StreamingHTTPResponse.__slots__": [
+            {
+                "type": "attr",
+                "anno": "tuple"
+            }
+        ],
+        "StreamingHTTPResponse.content_type": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "StreamingHTTPResponse.streaming_fn": [
+            {
+                "type": "attr",
+                "anno": "Callable"
+            }
+        ],
+        "StreamingHTTPResponse.status": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "StreamingHTTPResponse.headers": [
+            {
+                "type": "attr",
+                "anno": "CIMultiDict"
+            }
+        ],
+        "StreamingHTTPResponse._cookies": [
+            {
+                "type": "attr",
+                "anno": "CIMultiDict"
+            }
+        ],
+        "StreamingHTTPResponse.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "streaming_fn": "Callable",
+                    "status": "int",
+                    "headers": "CIMultiDict",
+                    "content_type": "str"
+                }
+            }
+        ],
+        "StreamingHTTPResponse.write": [
+            {
+                "type": "method",
+                "args": {
+                    "data": "bytes"
+                }
+            }
+        ],
+        "HTTPResponse.__slots__": [
+            {
+                "type": "attr",
+                "anno": "tuple"
+            }
+        ],
+        "HTTPResponse.content_type": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "HTTPResponse.body": [
+            {
+                "type": "attr",
+                "anno": "bytes"
+            }
+        ],
+        "HTTPResponse.status": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "HTTPResponse.headers": [
+            {
+                "type": "attr",
+                "anno": "CIMultiDict"
+            }
+        ],
+        "HTTPResponse._cookies": [
+            {
+                "type": "attr",
+                "anno": "CookieJar"
+            }
+        ],
+        "HTTPResponse.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "body": "str",
+                    "status": "int",
+                    "headers": "CIMultiDict",
+                    "content_type": "str",
+                    "body_bytes": "bytes"
+                }
+            }
+        ],
+        "HTTPResponse.cookies": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "json": [
+            {
+                "type": "func",
+                "args": {
+                    "body": "str",
+                    "status": "int",
+                    "headers": "CIMultiDict",
+                    "content_type": "str",
+                    "dumps": "Callable[[str], str]",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "text": [
+            {
+                "type": "func",
+                "args": {
+                    "body": "str",
+                    "status": "int",
+                    "headers": "CIMultiDict",
+                    "content_type": "str"
+                }
+            }
+        ],
+        "raw": [
+            {
+                "type": "func",
+                "args": {
+                    "body": "bytes",
+                    "status": "int",
+                    "headers": "CIMultiDict",
+                    "content_type": "str"
+                }
+            }
+        ],
+        "html": [
+            {
+                "type": "func",
+                "args": {
+                    "body": "str",
+                    "status": "int",
+                    "headers": "CIMultiDict"
+                }
+            }
+        ],
+        "file": [
+            {
+                "type": "func",
+                "args": {
+                    "location": "str",
+                    "status": "int",
+                    "mime_type": "str",
+                    "headers": "CIMultiDict",
+                    "filename": "str",
+                    "_range": "http.Range"
+                }
+            }
+        ],
+        "stream": [
+            {
+                "type": "func",
+                "args": {
+                    "streaming_fn": "Callable",
+                    "status": "int",
+                    "headers": "CIMultiDict",
+                    "content_type": "str"
+                }
+            }
+        ],
+        "redirect": [
+            {
+                "type": "func",
+                "args": {
+                    "to": "str",
+                    "headers": "CIMultiDict",
+                    "status": "int",
+                    "content_type": "str"
+                }
+            }
+        ],
+        "BaseHTTPResponse.cookies": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "BaseHTTPResponse._parse_headers": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "file_stream": [
+            {
+                "type": "func",
+                "args": {
+                    "location": "str",
+                    "status": "int",
+                    "chunk_size": "int",
+                    "mime_type": "str",
+                    "headers": "CIMultiDict",
+                    "filename": "str",
+                    "_range": "http.Range"
+                }
+            }
+        ],
+        "HTTPResponse.output": [
+            {
+                "type": "method",
+                "args": {
+                    "version": "str",
+                    "keep_alive": "bool",
+                    "keep_alive_timeout": "float"
+                }
+            }
+        ],
+        "StreamingHTTPResponse.get_headers": [
+            {
+                "type": "method",
+                "args": {
+                    "version": "str",
+                    "keep_alive": "bool",
+                    "keep_alive_timeout": "int"
+                }
+            }
+        ],
+        "StreamingHTTPResponse.stream": [
+            {
+                "type": "method",
+                "args": {
+                    "version": "str",
+                    "keep_alive": "bool",
+                    "keep_alive_timeout": "int"
+                }
+            }
+        ]
+    },
+    "http": {
+        "STATUS_CODES": [
+            {
+                "type": "var",
+                "anno": "dict"
+            }
+        ],
+        "_ENTITY_HEADERS": [
+            {
+                "type": "var",
+                "anno": "frozenset"
+            }
+        ],
+        "_HOP_BY_HOP_HEADERS": [
+            {
+                "type": "var",
+                "anno": "frozenset"
+            }
+        ],
+        "has_message_body": [
+            {
+                "type": "func",
+                "args": {
+                    "status": "int"
+                }
+            }
+        ],
+        "is_entity_header": [
+            {
+                "type": "func",
+                "args": {
+                    "header": "str"
+                }
+            }
+        ],
+        "is_hop_by_hop_header": [
+            {
+                "type": "func",
+                "args": {
+                    "header": "str"
+                }
+            }
+        ],
+        "remove_entity_headers": [
+            {
+                "type": "func",
+                "args": {
+                    "headers": "dict",
+                    "allowed": "tuple"
+                }
+            }
+        ]
+    },
+    "reloader_helpers": {
+        "_iter_module_files": [
+            {
+                "type": "func",
+                "args": {}
+            }
+        ],
+        "_get_args_for_reloading": [
+            {
+                "type": "func",
+                "args": {}
+            }
+        ],
+        "restart_with_reloader": [
+            {
+                "type": "func",
+                "args": {}
+            }
+        ],
+        "kill_process_children_unix": [
+            {
+                "type": "func",
+                "args": {
+                    "pid": "int"
+                }
+            }
+        ],
+        "kill_process_children_osx": [
+            {
+                "type": "func",
+                "args": {
+                    "pid": "int"
+                }
+            }
+        ],
+        "kill_process_children": [
+            {
+                "type": "func",
+                "args": {
+                    "pid": "int"
+                }
+            }
+        ],
+        "kill_program_completly": [
+            {
+                "type": "func",
+                "args": {
+                    "proc": "Process"
+                }
+            }
+        ],
+        "watchdog": [
+            {
+                "type": "func",
+                "args": {
+                    "sleep_interval": "int"
+                }
+            }
+        ]
+    },
+    "testing": {
+        "HOST": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "PORT": [
+            {
+                "type": "var",
+                "anno": "int"
+            }
+        ],
+        "SanicTestClient.app": [
+            {
+                "type": "attr",
+                "anno": "Sanic"
+            }
+        ],
+        "SanicTestClient.port": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "SanicTestClient.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "app": "Sanic",
+                    "port": "int"
+                }
+            }
+        ],
+        "SanicTestClient._local_request": [
+            {
+                "type": "method",
+                "args": {
+                    "method": "str",
+                    "uri": "str",
+                    "cookies": "dict",
+                    "args": "str",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "SanicTestClient._sanic_endpoint_test": [
+            {
+                "type": "method",
+                "args": {
+                    "method": "str",
+                    "uri": "str",
+                    "gather_request": "bool",
+                    "debug": "bool",
+                    "server_kwargs": "dict",
+                    "request_args": "str",
+                    "request_kwargs": "str"
+                }
+            }
+        ],
+        "SanicTestClient.head": [
+            {
+                "type": "method",
+                "args": {
+                    "args": "str",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "SanicTestClient.options": [
+            {
+                "type": "method",
+                "args": {
+                    "args": "str",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "SanicTestClient.patch": [
+            {
+                "type": "method",
+                "args": {
+                    "args": "str",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "SanicTestClient.delete": [
+            {
+                "type": "method",
+                "args": {
+                    "args": "str",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "SanicTestClient.put": [
+            {
+                "type": "method",
+                "args": {
+                    "args": "str",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "SanicTestClient.post": [
+            {
+                "type": "method",
+                "args": {
+                    "args": "str",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "SanicTestClient.get": [
+            {
+                "type": "method",
+                "args": {
+                    "args": "str",
+                    "kwargs": "str"
+                }
+            }
+        ]
+    },
+    "": {
+        "__version__": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "__all__": [
+            {
+                "type": "var",
+                "anno": "list"
+            }
+        ]
+    },
+    "request": {
+        "json_loads": [
+            {
+                "type": "var",
+                "anno": "Callable"
+            }
+        ],
+        "DEFAULT_HTTP_CONTENT_TYPE": [
+            {
+                "type": "var",
+                "anno": "str"
+            }
+        ],
+        "Request.__slots__": [
+            {
+                "type": "attr",
+                "anno": "tuple"
+            }
+        ],
+        "Request.raw_url": [
+            {
+                "type": "attr",
+                "anno": "bytes"
+            }
+        ],
+        "Request._parsed_url": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Request.app": [
+            {
+                "type": "attr",
+                "anno": "Request"
+            }
+        ],
+        "Request.headers": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Request.version": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Request.method": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Request.transport": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Request.body": [
+            {
+                "type": "attr",
+                "anno": "bytes"
+            }
+        ],
+        "Request.parsed_json": [
+            {
+                "type": "attr",
+                "anno": "RequestParameters"
+            }
+        ],
+        "Request.parsed_form": [
+            {
+                "type": "attr",
+                "anno": "RequestParameters"
+            }
+        ],
+        "Request.parsed_files": [
+            {
+                "type": "attr",
+                "anno": "RequestParameters"
+            }
+        ],
+        "Request.parsed_args": [
+            {
+                "type": "attr",
+                "anno": "RequestParameters"
+            }
+        ],
+        "Request.uri_template": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Request._cookies": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Request.stream": [
+            {
+                "type": "attr",
+                "anno": "asyncio.Queue"
+            }
+        ],
+        "Request.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "url_bytes": "bytes",
+                    "headers": "dict",
+                    "version": "str",
+                    "method": "str",
+                    "transport": "str"
+                }
+            }
+        ],
+        "Request.__bool__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.load_json": [
+            {
+                "type": "method",
+                "args": {
+                    "loads": "Callable"
+                }
+            }
+        ],
+        "Request.json": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request._socket": [
+            {
+                "type": "attr",
+                "anno": "tuple[str, int]"
+            }
+        ],
+        "Request._ip": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Request._port": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "Request._get_address": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.socket": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.ip": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.port": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request._remote_addr": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Request.path": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.__repr__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.query_string": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.args": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.raw_args": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "File": [
+            {
+                "type": "var",
+                "anno": "namedtuple[str, ...]"
+            }
+        ],
+        "RequestParameters.get": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str",
+                    "default": "str"
+                }
+            }
+        ],
+        "parse_multipart_form": [
+            {
+                "type": "func",
+                "args": {
+                    "body": "bytes",
+                    "boundary": "bytes"
+                }
+            }
+        ],
+        "Request.match_info": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.content_type": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.host": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.scheme": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.url": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.remote_addr": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.cookies": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.form": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.files": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Request.token": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "RequestParameters.getlist": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str",
+                    "default": "object"
+                }
+            }
+        ]
+    },
+    "views": {
+        "HTTPMethodView.decorators": [
+            {
+                "type": "attr",
+                "anno": "list[Callable[[HTTPMethodView], HTTPMethodView]]"
+            }
+        ],
+        "HTTPMethodView.dispatch_request": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "Request",
+                    "args": "str",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "HTTPMethodView.as_view": [
+            {
+                "type": "method",
+                "args": {
+                    "cls": "type[HTTPMethodView]",
+                    "class_args": "str",
+                    "class_kwargs": "str"
+                }
+            }
+        ],
+        "stream": [
+            {
+                "type": "func",
+                "args": {
+                    "func": "Callable"
+                }
+            }
+        ],
+        "CompositionView.handlers": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "CompositionView.__init__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "CompositionView.add": [
+            {
+                "type": "method",
+                "args": {
+                    "methods": "frozenset",
+                    "handler": "CompositionView",
+                    "stream": "bool"
+                }
+            }
+        ],
+        "CompositionView.__call__": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "Request",
+                    "args": "str",
+                    "kwargs": "str"
+                }
+            }
+        ]
+    },
+    "router": {
+        "Route": [
+            {
+                "type": "var",
+                "anno": "Route"
+            }
+        ],
+        "Parameter": [
+            {
+                "type": "var",
+                "anno": "Parameter"
+            }
+        ],
+        "REGEX_TYPES": [
+            {
+                "type": "var",
+                "anno": "dict"
+            }
+        ],
+        "ROUTER_CACHE_SIZE": [
+            {
+                "type": "var",
+                "anno": "int"
+            }
+        ],
+        "url_hash": [
+            {
+                "type": "func",
+                "args": {
+                    "url": "str"
+                }
+            }
+        ],
+        "Router.routes_static": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Router.routes_dynamic": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Router.routes_always_check": [
+            {
+                "type": "attr",
+                "anno": "list"
+            }
+        ],
+        "Router.parameter_pattern": [
+            {
+                "type": "attr",
+                "anno": "re.Pattern"
+            }
+        ],
+        "Router.routes_all": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Router.routes_names": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Router.routes_static_files": [
+            {
+                "type": "attr",
+                "anno": "dict"
+            }
+        ],
+        "Router.hosts": [
+            {
+                "type": "attr",
+                "anno": "set"
+            }
+        ],
+        "Router.__init__": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "Router.check_dynamic_route_exists": [
+            {
+                "type": "method",
+                "args": {
+                    "pattern": "str",
+                    "routes_to_check": "list",
+                    "parameters": "list"
+                }
+            }
+        ],
+        "Router.parse_parameter_string": [
+            {
+                "type": "method",
+                "args": {
+                    "cls": "str",
+                    "parameter_string": "str"
+                }
+            }
+        ],
+        "Router._add": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "methods": "frozenset",
+                    "handler": "CompositionView",
+                    "host": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Router.add": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "methods": "frozenset",
+                    "handler": "CompositionView",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Router.get": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "aiohttp.ClientRequest"
+                }
+            }
+        ],
+        "Router.is_stream_handler": [
+            {
+                "type": "method",
+                "args": {
+                    "request": "aiohttp.ClientRequest"
+                }
+            }
+        ],
+        "Router.get_supported_methods": [
+            {
+                "type": "method",
+                "args": {
+                    "url": "str"
+                }
+            }
+        ],
+        "Router._get": [
+            {
+                "type": "method",
+                "args": {
+                    "url": "str",
+                    "method": "str",
+                    "host": "str"
+                }
+            }
+        ],
+        "Router.remove": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "clean_cache": "bool",
+                    "host": "str"
+                }
+            }
+        ],
+        "Router.find_route_by_view_name": [
+            {
+                "type": "method",
+                "args": {
+                    "view_name": "str",
+                    "name": "str"
+                }
+            }
+        ]
+    },
+    "blueprints": {
+        "FutureRoute": [
+            {
+                "type": "var",
+                "anno": "FutureRoute"
+            }
+        ],
+        "FutureListener": [
+            {
+                "type": "var",
+                "anno": "FutureListener"
+            }
+        ],
+        "FutureMiddleware": [
+            {
+                "type": "var",
+                "anno": "FutureMiddleware"
+            }
+        ],
+        "FutureException": [
+            {
+                "type": "var",
+                "anno": "FutureException"
+            }
+        ],
+        "FutureStatic": [
+            {
+                "type": "var",
+                "anno": "FutureRoute"
+            }
+        ],
+        "Blueprint.name": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Blueprint.url_prefix": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Blueprint.host": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Blueprint.routes": [
+            {
+                "type": "attr",
+                "anno": "list[FutureRoute]"
+            }
+        ],
+        "Blueprint.websocket_routes": [
+            {
+                "type": "attr",
+                "anno": "list[FutureRoute]"
+            }
+        ],
+        "Blueprint.exceptions": [
+            {
+                "type": "attr",
+                "anno": "list[FutureException]"
+            }
+        ],
+        "Blueprint.listeners": [
+            {
+                "type": "attr",
+                "anno": "dict[str, list[FutureListener]]"
+            }
+        ],
+        "Blueprint.middlewares": [
+            {
+                "type": "attr",
+                "anno": "list[FutureMiddleware]"
+            }
+        ],
+        "Blueprint.statics": [
+            {
+                "type": "attr",
+                "anno": "list[FutureStatic]"
+            }
+        ],
+        "Blueprint.version": [
+            {
+                "type": "attr",
+                "anno": "str"
+            }
+        ],
+        "Blueprint.strict_slashes": [
+            {
+                "type": "attr",
+                "anno": "bool"
+            }
+        ],
+        "Blueprint.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "name": "str",
+                    "url_prefix": "str",
+                    "host": "str",
+                    "version": "str",
+                    "strict_slashes": "bool"
+                }
+            }
+        ],
+        "Blueprint.group": [
+            {
+                "type": "method",
+                "args": {
+                    "blueprints": "Blueprint",
+                    "url_prefix": "str"
+                }
+            }
+        ],
+        "Blueprint.route": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "methods": "frozenset",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "stream": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Blueprint.websocket": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Blueprint.add_websocket_route": [
+            {
+                "type": "method",
+                "args": {
+                    "handler": "FutureListener",
+                    "uri": "str",
+                    "host": "str",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Blueprint.listener": [
+            {
+                "type": "method",
+                "args": {
+                    "event": "str"
+                }
+            }
+        ],
+        "Blueprint.middleware": [
+            {
+                "type": "method",
+                "args": {
+                    "args": "Any",
+                    "kwargs": "Any"
+                }
+            }
+        ],
+        "Blueprint.exception": [
+            {
+                "type": "method",
+                "args": {
+                    "args": "str",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "Blueprint.get": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Blueprint.add_route": [
+            {
+                "type": "method",
+                "args": {
+                    "handler": "CompositionView",
+                    "uri": "str",
+                    "methods": "frozenset",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Blueprint.static": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "file_or_directory": "str",
+                    "args": "str",
+                    "kwargs": "str"
+                }
+            }
+        ],
+        "Blueprint.register": [
+            {
+                "type": "method",
+                "args": {
+                    "app": "aiohttp.ClientRequest",
+                    "options": "dict"
+                }
+            }
+        ],
+        "Blueprint.post": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "stream": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Blueprint.put": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "stream": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Blueprint.head": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Blueprint.options": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Blueprint.patch": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "stream": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ],
+        "Blueprint.delete": [
+            {
+                "type": "method",
+                "args": {
+                    "uri": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "version": "str",
+                    "name": "str"
+                }
+            }
+        ]
+    },
+    "static": {
+        "register": [
+            {
+                "type": "func",
+                "args": {
+                    "app": "aiohttp.Client",
+                    "uri": "str",
+                    "file_or_directory": "str",
+                    "pattern": "str",
+                    "use_modified_since": "bool",
+                    "use_content_range": "bool",
+                    "stream_large_files": "int",
+                    "name": "str",
+                    "host": "str",
+                    "strict_slashes": "bool",
+                    "content_type": "str"
+                }
+            }
+        ]
+    }
+}
