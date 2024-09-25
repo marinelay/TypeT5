@@ -1,3 +1,6 @@
+ManyTypes4Py/
+TokenizedSrcSets/
+
 config
 *.egg-info
 code_output

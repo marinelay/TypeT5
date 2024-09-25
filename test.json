@@ -1,0 +1,97 @@
+{
+    "ex_code_2": {
+        "fib": [
+            {
+                "type": "func",
+                "args": {
+                    "n": "int"
+                }
+            }
+        ],
+        "foo": [
+            {
+                "type": "func",
+                "args": {
+                    "bar": "int"
+                }
+            }
+        ],
+        "Bar.x": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "Bar.y": [
+            {
+                "type": "attr",
+                "anno": "int"
+            }
+        ],
+        "Bar.reset": [
+            {
+                "type": "method",
+                "args": {
+                    "w0": "str"
+                }
+            }
+        ],
+        "Bar.__init__": [
+            {
+                "type": "method",
+                "args": {
+                    "x": "int"
+                }
+            }
+        ]
+    },
+    "ex_code_1": {
+        "good": [
+            {
+                "type": "var",
+                "anno": "int"
+            }
+        ],
+        "fib": [
+            {
+                "type": "func",
+                "args": {
+                    "n": "int"
+                }
+            }
+        ],
+        "Wrapper.foo": [
+            {
+                "type": "method",
+                "args": {
+                    "bar": "int"
+                }
+            }
+        ],
+        "Wrapper.inc": [
+            {
+                "type": "method",
+                "args": {}
+            }
+        ],
+        "int_add": [
+            {
+                "type": "func",
+                "args": {
+                    "a": "int",
+                    "b": "int"
+                }
+            }
+        ],
+        "int_tripple_add": [
+            {
+                "type": "func",
+                "args": {
+                    "a": "int",
+                    "b": "int",
+                    "c": "int"
+                }
+            }
+        ]
+    }
+}
