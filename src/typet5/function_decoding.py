@@ -51,7 +51,9 @@ class RolloutPrediction:
     assignments: SignatureMap
     elem2preds: dict[ProjectPath, Sequence[PythonType]]
     elem2inputs: dict[ProjectPath, dict]
+    elem2all_preds: dict[ProjectPath, list[list[PythonType]]]
     pred_assignments: SignatureMap = field(default_factory=SignatureMap)
+    all_pred_sigmap: dict[ProjectPath, list[ElemSignature]] = field(default_factory=dict)
 
     @property
     def final_sigmap(self) -> SignatureMap:
@@ -108,11 +110,6 @@ class EvalResult:
     def inspect_elem(self, identifier: int | str | None, path: ProjectPath) -> None:
         pid = self.find_projects(identifier)[0]
 
-        print("Expected: ", self.label_maps[pid][path])
-        print("Predicted:", self.predictions[pid].final_sigmap[path])
-        print("Code:")
-        print(decode_tokens(self.predictions[pid].elem2inputs[path]["input_ids"]))
-
     def print_predictions(self) -> None:
         for proj, rollout, label_map in zip(
             self.project_roots, self.predictions, self.label_maps
@@ -122,6 +119,15 @@ class EvalResult:
             for path, sig in sig_map.items():
                 print(f"\t{path}: {str(sig)}")
 
+    def return_predictions(self):
+        sig_dict = {}
+        for proj, rollout, label_map in zip(
+            self.project_roots, self.predictions, self.label_maps
+        ):
+            sig_map = reorder_signature_map(rollout.predicted_sigmap, label_map)
+            sig_dict[proj] = sig_map
+
+        return sig_dict
 
 @dataclass
 class RolloutCtx:
@@ -255,8 +261,10 @@ class RolloutCtx:
         preamble_cache = dict[ModuleName, tuple[str, TokenSeq]]()
 
         pred_sigmap = SignatureMap()
+        all_pred_sigmap = dict[ProjectPath, list[ElemSignature]]()
         final_sigmap = SignatureMap()
         elem2preds = dict[ProjectPath, Sequence[PythonType]]()
+        elem2all_preds = dict[ProjectPath, list[list[PythonType]]]()
         elem2inputs = dict[ProjectPath, dict]()
         mask_annot = cst.Annotation(cst.Name(SpecialNames.TypeMask))
 
@@ -320,18 +328,31 @@ class RolloutCtx:
             )
 
             pred_types = list[PythonType]()
+            all_pred_types = list[list[PythonType]]()
             new_sig = copy.deepcopy(sig)
             if model_inputs:
-                for chunk in model_inputs:
+                for k, chunk in enumerate(model_inputs):
                     chunk = {
                         "input_ids": torch.tensor([chunk["input_ids"]]),
                         "labels": torch.tensor([chunk["labels"]]),
                         "n_labels": torch.tensor([chunk["n_labels"]]),
                     }
-                    preds, _ = await eloop.run_in_executor(
+                    preds, output_ids = await eloop.run_in_executor(
                         model_executor, self.model.predict_on_batch, chunk
                     )
+
+                    # print(chunk["n_labels"], output_ids)
+                    # print(preds)
+
+                    # pred_types.extend(preds[0])
                     pred_types.extend(preds[0])
+
+                    if k == 0:
+                        all_pred_types.extend(preds)
+                    else:
+                        for i, p in enumerate(preds):
+                            all_pred_types[i].extend(p)
+
                 elem2inputs[elem.path] = model_inputs[0]
 
                 # update the signature with the predicted types
@@ -356,6 +377,48 @@ class RolloutCtx:
                             cst.parse_expression(str(pred_types[n_pred]))
                         )
                 pred_sigmap[elem.path] = new_sig
+
+                all_pred_sigmap_elem = []
+
+                for pred_types in all_pred_types:
+                    new_sig = copy.deepcopy(sig)
+                    # update the signature with the predicted types
+                    if isinstance(new_sig, VariableSignature):
+                        assert new_sig.annot is None or is_mask_annot(
+                            new_sig.annot
+                        ), f"For {elem}, sig={new_sig}"
+                        assert_eq(len(pred_types), 1)
+                        new_sig.annot = cst.Annotation(
+                            cst.parse_expression(str(pred_types[0]))
+                        )
+                    elif isinstance(elem, PythonFunction):
+                        # assert len(pred_types) >= len(sig.params) + 1
+                        n_pred = 0
+                        try:
+                            for (n, a) in new_sig.params.items():
+                                if a is None or is_mask_annot(a):
+                                    new_type = cst.parse_expression(str(pred_types[n_pred]))
+                                    new_sig.params[n] = cst.Annotation(new_type)
+                                    n_pred += 1
+                            if new_sig.returns is None or is_mask_annot(new_sig.returns):
+                                new_sig.returns = cst.Annotation(
+                                    cst.parse_expression(str(pred_types[n_pred]))
+                                )
+                        except IndexError:
+                            print(f"IndexError: {elem.path}, {len(pred_types)}, {len(sig.params)}")
+                            for i, preds in enumerate(all_pred_types):
+                                print(f"Preds {i}: {len(preds)}")
+
+                            n_pred = 0 
+                            for (n, a) in new_sig.params.items():
+                                if a is None or is_mask_annot(a):
+                                    print(f"n_pred: {n_pred}")
+                                    n_pred += 1
+                            continue
+                    all_pred_sigmap_elem.append(new_sig)
+                all_pred_sigmap[elem.path] = all_pred_sigmap_elem
+
+
             if (
                 oracle is not None
                 and (label := oracle.get(elem.path)) is not None
@@ -364,10 +427,16 @@ class RolloutCtx:
                 new_sig = new_sig.updated(as_any(label))
             final_sigmap[elem.path] = new_sig
             elem2preds[elem.path] = pred_types
+            elem2all_preds[elem.path] = all_pred_types
+
+
+            # print(elem2preds[elem.path])
+            # print(elem2all_preds[elem.path])
+
             if model_inputs:
                 progress_cbk(elem, pred_types, new_sig)
 
-        return RolloutPrediction(final_sigmap, elem2preds, elem2inputs, pred_sigmap)
+        return RolloutPrediction(final_sigmap, elem2preds, elem2inputs, elem2all_preds, pred_sigmap, all_pred_sigmap)
 
 
 def is_mask_annot(a: cst.Annotation) -> bool:

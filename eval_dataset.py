@@ -63,6 +63,10 @@ def run():
 
     # load test data
     sdata_name = get_tk_dataset_name(dataset_name, pre_args, func_only=False)
+
+    print(f"Loading tokenized srcsets from {sdata_name}")
+    exit()
+
     sdata_path = get_dataroot() / "TokenizedSrcSets" / sdata_name
     recreate=False
     if recreate or not sdata_path.exists():
