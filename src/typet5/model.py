@@ -106,7 +106,7 @@ class ModelWrapper:
     def predict_on_batch(
         self,
         batch: dict,
-        num_return_sequences: int | None = None,
+        num_return_sequences: int | None = 5,
     ) -> tuple[list[list[PythonType]], Tensor]:
         """Run the model on the given batch and return the predicted types for each row."""
         model = self.model
@@ -115,7 +115,7 @@ class ModelWrapper:
         max_labels = max(n_labels)
 
         div_pen = args.diversity_penalty
-        if args.num_beam_groups is not None:
+        if args.num_beam_groups is not None and args.num_beam_groups > 1:
             assert (
                 div_pen is not None and div_pen > 0
             ), "num_beam_groups requires diversity_penalty > 0"

@@ -71,3 +71,5 @@ test_capi
 /.mypyc-flake8-cache.json
 /mypyc/lib-rt/build/
 /mypyc/lib-rt/*.so
+
+ManyTypes4Py/*

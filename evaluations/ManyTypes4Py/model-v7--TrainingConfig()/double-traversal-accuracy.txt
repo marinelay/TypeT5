@@ -1,0 +1,102 @@
+full_acc:
+   full_acc: 71.75% (count=16.0k)
+   full_acc_by_cat:
+      FuncArg: 65.20% (count=9.1k)
+      FuncReturn: 82.67% (count=4.5k)
+      ClassAtribute: 75.97% (count=2.3k)
+      GlobalVar: 77.24% (count=123)
+   full_acc_by_simple:
+      complex: 38.89% (count=3.5k)
+      simple: 81.08% (count=12.4k)
+   full_acc_label_size: 1.4263
+   full_acc_pred_size: 1.4872
+   full_acc_ignored_labels: 0
+full_acc_common:
+   full_acc_common: 74.54% (count=12.0k)
+   full_acc_common_by_cat:
+      FuncArg: 73.80% (count=7.2k)
+      FuncReturn: 74.98% (count=3.5k)
+      ClassAtribute: 77.40% (count=1.2k)
+      GlobalVar: 81.25% (count=64)
+   full_acc_common_by_simple:
+      complex: 37.94% (count=2.6k)
+      simple: 84.79% (count=9.4k)
+   full_acc_common_label_size: 1.3984
+   full_acc_common_pred_size: 1.5168
+   full_acc_common_ignored_labels: 3935
+full_acc_rare:
+   full_acc_rare: 63.23% (count=3.9k)
+   full_acc_rare_by_cat:
+      FuncArg: 62.85% (count=2.7k)
+      FuncReturn: 64.45% (count=1.0k)
+      ClassAtribute: 61.23% (count=227)
+      GlobalVar: 70.00% (count=30)
+   full_acc_rare_by_simple:
+      complex: 41.67% (count=900)
+      simple: 69.62% (count=3.0k)
+   full_acc_rare_label_size: 1.5116
+   full_acc_rare_pred_size: 1.397
+   full_acc_rare_ignored_labels: 12016
+acc:
+   acc: 74.11% (count=13.7k)
+   acc_by_cat:
+      FuncArg: 71.90% (count=8.1k)
+      FuncReturn: 76.16% (count=3.8k)
+      ClassAtribute: 79.77% (count=1.7k)
+      GlobalVar: 78.95% (count=76)
+   acc_by_simple:
+      complex: 35.90% (count=2.7k)
+      simple: 83.30% (count=11.0k)
+   acc_label_size: 1.2861
+   acc_pred_size: 1.4232
+   acc_ignored_labels: 2271
+acc_common:
+   acc_common: 77.01% (count=9.8k)
+   acc_common_by_cat:
+      FuncArg: 75.97% (count=5.8k)
+      FuncReturn: 79.47% (count=2.9k)
+      ClassAtribute: 75.83% (count=1.0k)
+      GlobalVar: 80.70% (count=57)
+   acc_common_by_simple:
+      complex: 33.64% (count=1.9k)
+      simple: 87.77% (count=7.8k)
+   acc_common_label_size: 1.2593
+   acc_common_pred_size: 1.4756
+   acc_common_ignored_labels: 6198
+acc_rare:
+   acc_rare: 66.90% (count=3.9k)
+   acc_rare_by_cat:
+      FuncArg: 67.27% (count=2.7k)
+      FuncReturn: 66.21% (count=1.0k)
+      ClassAtribute: 64.32% (count=227)
+      GlobalVar: 76.67% (count=30)
+   acc_rare_by_simple:
+      complex: 42.02% (count=714)
+      simple: 72.42% (count=3.2k)
+   acc_rare_label_size: 1.3527
+   acc_rare_pred_size: 1.2931
+   acc_rare_ignored_labels: 12024
+base_acc:
+   base_acc: 84.14% (count=13.7k)
+   base_acc_by_cat:
+      FuncArg: 83.63% (count=8.1k)
+      FuncReturn: 84.21% (count=3.8k)
+      ClassAtribute: 86.51% (count=1.7k)
+      GlobalVar: 80.26% (count=76)
+   base_acc_ignored_labels: 2271
+base_acc_common:
+   base_acc_common: 87.68% (count=10.4k)
+   base_acc_common_by_cat:
+      FuncArg: 88.19% (count=6.3k)
+      FuncReturn: 87.87% (count=3.0k)
+      ClassAtribute: 84.56% (count=1.0k)
+      GlobalVar: 77.59% (count=58)
+   base_acc_common_ignored_labels: 5541
+base_acc_rare:
+   base_acc_rare: 72.87% (count=3.3k)
+   base_acc_rare_by_cat:
+      FuncArg: 72.90% (count=2.3k)
+      FuncReturn: 73.12% (count=800)
+      ClassAtribute: 73.65% (count=167)
+      GlobalVar: 60.00% (count=30)
+   base_acc_rare_ignored_labels: 12681
