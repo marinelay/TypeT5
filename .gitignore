@@ -77,3 +77,4 @@ test_capi
 
 ManyTypes4Py/*
 scripts/useful_repos.pkl
+evaluations/*
