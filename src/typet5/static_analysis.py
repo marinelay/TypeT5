@@ -1257,6 +1257,8 @@ class SignatureErrorAnalysis:
 
         self.errors = all_errors
 
+    def single_match(self, pred: PythonType, label: PythonType, metric):
+        return type_accuracies([pred], [label], [AnnotCat.FuncArg], metric)
 
 # -----------------------------------------------------------
 # utilities for static analysis

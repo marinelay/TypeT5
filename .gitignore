@@ -1,3 +1,6 @@
+ManyTypes4Py/
+TokenizedSrcSets/
+
 config
 *.egg-info
 code_output
@@ -73,3 +76,4 @@ test_capi
 /mypyc/lib-rt/*.so
 
 ManyTypes4Py/*
+scripts/useful_repos.pkl

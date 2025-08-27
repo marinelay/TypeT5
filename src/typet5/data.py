@@ -58,6 +58,9 @@ class GitRepo:
     def repo_dir(self, repos_dir: Path) -> Path:
         return repos_dir / "downloaded" / self.authorname()
 
+    def repo_dir_without_downloaded(self, repos_dir: Path) -> Path:
+        return repos_dir / self.authorname()
+
     def download(self, repos_dir: Path, timeout=None) -> bool:
         subprocess.run(
             ["git", "clone", "--depth", "1", self.url, self.authorname()],
@@ -98,20 +101,30 @@ class GitRepo:
         return n_lines
 
     def collect_annotations(
-        self, repos_dir, silent=True
+        self, repos_dir, silent=True, without_downloaded=False
     ) -> dict[Path, dict[AnnotPath, tuple[Optional[PythonType], AnnotCat]]]:
         n_paths, n_annots = 0, 0
         file_to_annots = dict[
             Path, dict[AnnotPath, tuple[Optional[PythonType], AnnotCat]]
         ]()
-        for src in self.repo_dir(repos_dir).glob("**/*.py"):
-            rpath = src.relative_to(self.repo_dir(repos_dir))
+        repo_dir = self.repo_dir(repos_dir) if not without_downloaded else self.repo_dir_without_downloaded(repos_dir)
+
+        # print("Parsing annotations in", repo_dir)
+
+        for src in repo_dir.glob("**/*.py"):
+            rpath = src.relative_to(repo_dir)
             m = cst.parse_module(read_file(src))
             paths = collect_annots_info(m)
             path_to_cat = {pinfo.path: pinfo.cat for pinfo in paths}
             n_paths += len(paths)
-            annots = (info for info in paths if info.annot is not None)
+            annots = [info for info in paths if info.annot is not None]
+
             n_annots += sum(1 for _ in annots)
+            # annots = list(info for info in paths if info.annot is not None)
+            # print(f"Found {n_annots} annotations in {rpath} paths.")
+            # for info in annots:
+            #   print(info)
+
             file_to_annots[rpath] = {
                 (k := info.path): (
                     parse_type_expr(
