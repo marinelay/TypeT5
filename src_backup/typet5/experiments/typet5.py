@@ -32,21 +32,6 @@ def accs_as_table_row(accs_dict: dict):
 
 
 class TypeT5Configs:
-    CodeT5 = TrainingConfig(
-        func_only=True,
-        pre_args=PreprocessArgs(
-            imports_in_preamble=False,
-            stub_in_preamble=False,
-            max_callees=0,
-            max_callers=0,
-            drop_env_types=True,
-            add_implicit_rel_imports=True,
-        ),
-        left_margin=2048,
-        right_margin=2048 - 512,
-        preamble_size=0
-    )
-
     Default = TrainingConfig(
         func_only=True,
         pre_args=PreprocessArgs(

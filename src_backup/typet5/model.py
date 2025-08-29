@@ -125,7 +125,7 @@ class ModelWrapper:
         output_ids = model.generate(
             inputs=batch["input_ids"].to(model.device),
             do_sample=args.do_sample,
-            # top_p=args.top_p,
+            top_p=args.top_p,
             num_beams=args.num_beams,
             num_return_sequences=num_return_sequences,
             num_beam_groups=args.num_beam_groups,

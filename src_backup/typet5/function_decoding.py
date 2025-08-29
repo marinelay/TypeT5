@@ -380,32 +380,32 @@ class RolloutCtx:
 
                 all_pred_sigmap_elem = []
 
-                for pred_types_a in all_pred_types:
+                for pred_types in all_pred_types:
                     new_sig = copy.deepcopy(sig)
                     # update the signature with the predicted types
                     if isinstance(new_sig, VariableSignature):
                         assert new_sig.annot is None or is_mask_annot(
                             new_sig.annot
                         ), f"For {elem}, sig={new_sig}"
-                        assert_eq(len(pred_types_a), 1)
+                        assert_eq(len(pred_types), 1)
                         new_sig.annot = cst.Annotation(
-                            cst.parse_expression(str(pred_types_a[0]))
+                            cst.parse_expression(str(pred_types[0]))
                         )
                     elif isinstance(elem, PythonFunction):
-                        # assert len(pred_types_a) >= len(sig.params) + 1
+                        # assert len(pred_types) >= len(sig.params) + 1
                         n_pred = 0
                         try:
                             for (n, a) in new_sig.params.items():
                                 if a is None or is_mask_annot(a):
-                                    new_type = cst.parse_expression(str(pred_types_a[n_pred]))
+                                    new_type = cst.parse_expression(str(pred_types[n_pred]))
                                     new_sig.params[n] = cst.Annotation(new_type)
                                     n_pred += 1
                             if new_sig.returns is None or is_mask_annot(new_sig.returns):
                                 new_sig.returns = cst.Annotation(
-                                    cst.parse_expression(str(pred_types_a[n_pred]))
+                                    cst.parse_expression(str(pred_types[n_pred]))
                                 )
                         except IndexError:
-                            print(f"IndexError: {elem.path}, {len(pred_types_a)}, {len(sig.params)}")
+                            print(f"IndexError: {elem.path}, {len(pred_types)}, {len(sig.params)}")
                             for i, preds in enumerate(all_pred_types):
                                 print(f"Preds {i}: {len(preds)}")
 

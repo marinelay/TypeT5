@@ -173,7 +173,7 @@ class CtxArgs:
     inline_prev_gold: bool = False
 
     def __post_init__(self):
-        # assert self.preamble_size > 0
+        assert self.preamble_size > 0
         assert (
             self.preamble_size < self.left_margin
         ), "Preamble bigger than left_margin.(Preamble is allcoated from the left margin.)"
